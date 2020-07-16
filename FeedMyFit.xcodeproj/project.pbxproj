@@ -3,16 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8300856B24C03BA5004BE80D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8300856A24C03BA5004BE80D /* SwiftUICharts */; };
+		8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300856C24C0494C004BE80D /* MeFeedbackView.swift */; };
 		837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */; };
 		837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD624BF0C4F002B4C0A /* ContentView.swift */; };
 		837EEBD924BF0C51002B4C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837EEBD824BF0C51002B4C0A /* Assets.xcassets */; };
 		837EEBDC24BF0C51002B4C0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837EEBDB24BF0C51002B4C0A /* Preview Assets.xcassets */; };
 		837EEBE724BF0C52002B4C0A /* FeedMyFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBE624BF0C52002B4C0A /* FeedMyFitTests.swift */; };
 		837EEBF224BF0C52002B4C0A /* FeedMyFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBF124BF0C52002B4C0A /* FeedMyFitUITests.swift */; };
+		837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBFF24BF0F68002B4C0A /* MeView.swift */; };
+		83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */; };
+		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
+		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
+		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8300856C24C0494C004BE80D /* MeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeFeedbackView.swift; sourceTree = "<group>"; };
 		837EEBD124BF0C4F002B4C0A /* FeedMyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyFitApp.swift; sourceTree = "<group>"; };
 		837EEBD624BF0C4F002B4C0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +53,11 @@
 		837EEBED24BF0C52002B4C0A /* FeedMyFitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeedMyFitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		837EEBF124BF0C52002B4C0A /* FeedMyFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyFitUITests.swift; sourceTree = "<group>"; };
 		837EEBF324BF0C52002B4C0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		837EEBFF24BF0F68002B4C0A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeNotificationCenterView.swift; sourceTree = "<group>"; };
+		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
+		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
+		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8300856B24C03BA5004BE80D /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8300856E24C05105004BE80D /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				837EEBFF24BF0F68002B4C0A /* MeView.swift */,
+				83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */,
+				83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */,
+				83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */,
+				83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */,
+				8300856C24C0494C004BE80D /* MeFeedbackView.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
 		837EEBC824BF0C4F002B4C0A = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */,
-				837EEBD624BF0C4F002B4C0A /* ContentView.swift */,
-				837EEBD824BF0C51002B4C0A /* Assets.xcassets */,
+				838A829024BF188400D84B3D /* UI */,
+				838A828F24BF186700D84B3D /* Resources */,
 				837EEBDD24BF0C51002B4C0A /* Info.plist */,
 				837EEBDA24BF0C51002B4C0A /* Preview Content */,
 			);
@@ -130,6 +157,23 @@
 			path = FeedMyFitUITests;
 			sourceTree = "<group>";
 		};
+		838A828F24BF186700D84B3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				837EEBD824BF0C51002B4C0A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		838A829024BF188400D84B3D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				837EEBD624BF0C4F002B4C0A /* ContentView.swift */,
+				8300856E24C05105004BE80D /* Me */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +190,9 @@
 			dependencies = (
 			);
 			name = FeedMyFit;
+			packageProductDependencies = (
+				8300856A24C03BA5004BE80D /* SwiftUICharts */,
+			);
 			productName = FeedMyFit;
 			productReference = 837EEBD124BF0C4F002B4C0A /* FeedMyFit.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 837EEBC824BF0C4F002B4C0A;
+			packageReferences = (
+				8300856924C03BA5004BE80D /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 837EEBD224BF0C4F002B4C0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +309,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */,
+				8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */,
 				837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
+				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
+				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
+				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
+				83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +483,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = top.Saafo.FeedMyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,7 +505,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = top.Saafo.FeedMyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,6 +636,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8300856924C03BA5004BE80D /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8300856A24C03BA5004BE80D /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8300856924C03BA5004BE80D /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 837EEBC924BF0C4F002B4C0A /* Project object */;
 }
