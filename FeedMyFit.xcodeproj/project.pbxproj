@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8300856B24C03BA5004BE80D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8300856A24C03BA5004BE80D /* SwiftUICharts */; };
 		8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300856C24C0494C004BE80D /* MeFeedbackView.swift */; };
+		8300857124C05938004BE80D /* RankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300857024C05938004BE80D /* RankListView.swift */; };
+		83641A6924C0836F00C5619A /* LeagueGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83641A6824C0810300C5619A /* LeagueGothic.otf */; };
 		837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */; };
 		837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD624BF0C4F002B4C0A /* ContentView.swift */; };
 		837EEBD924BF0C51002B4C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837EEBD824BF0C51002B4C0A /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		8300856C24C0494C004BE80D /* MeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeFeedbackView.swift; sourceTree = "<group>"; };
+		8300857024C05938004BE80D /* RankListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListView.swift; sourceTree = "<group>"; };
+		83641A6824C0810300C5619A /* LeagueGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeagueGothic.otf; sourceTree = "<group>"; };
 		837EEBD124BF0C4F002B4C0A /* FeedMyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyFitApp.swift; sourceTree = "<group>"; };
 		837EEBD624BF0C4F002B4C0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,22 @@
 				8300856C24C0494C004BE80D /* MeFeedbackView.swift */,
 			);
 			path = Me;
+			sourceTree = "<group>";
+		};
+		8300856F24C0590A004BE80D /* RankList */ = {
+			isa = PBXGroup;
+			children = (
+				8300857024C05938004BE80D /* RankListView.swift */,
+			);
+			path = RankList;
+			sourceTree = "<group>";
+		};
+		83641A6724C080A800C5619A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				83641A6824C0810300C5619A /* LeagueGothic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		837EEBC824BF0C4F002B4C0A = {
@@ -161,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				837EEBD824BF0C51002B4C0A /* Assets.xcassets */,
+				83641A6724C080A800C5619A /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				837EEBD624BF0C4F002B4C0A /* ContentView.swift */,
+				8300856F24C0590A004BE80D /* RankList */,
 				8300856E24C05105004BE80D /* Me */,
 			);
 			path = UI;
@@ -262,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 837EEBC824BF0C4F002B4C0A;
 			packageReferences = (
@@ -284,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				837EEBDC24BF0C51002B4C0A /* Preview Assets.xcassets in Resources */,
+				83641A6924C0836F00C5619A /* LeagueGothic.otf in Resources */,
 				837EEBD924BF0C51002B4C0A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +339,7 @@
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
+				8300857124C05938004BE80D /* RankListView.swift in Sources */,
 				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
 				83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */,
 			);
@@ -486,7 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -508,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

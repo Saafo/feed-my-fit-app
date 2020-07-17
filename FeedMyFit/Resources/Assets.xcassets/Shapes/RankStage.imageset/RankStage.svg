@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="278px" height="154px" viewBox="0 0 278 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#B5D5B1" offset="0%"></stop>
+            <stop stop-color="#B3D7AE" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#C4E6BF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-11-Pro" transform="translate(-50.000000, -324.000000)">
+            <g id="Group" transform="translate(50.000000, 324.000000)">
+                <g id="Stage-3" transform="translate(170.000000, 18.000000)">
+                    <polygon id="Rectangle-Copy-4" fill="url(#linearGradient-1)" points="21 -9.41469125e-14 86.5254344 -9.41469125e-14 108 20.3885549 0 20.3885549"></polygon>
+                    <polygon id="Rectangle-Copy-2" fill="url(#linearGradient-2)" points="0 20 108 20 72 136 10 136"></polygon>
+                </g>
+                <g id="Stage-2" transform="translate(0.000000, 18.000000)">
+                    <polygon id="Rectangle-Copy" fill="url(#linearGradient-2)" points="0 20 108 20 97 136 36 136"></polygon>
+                    <polygon id="Rectangle-Copy-3" fill="url(#linearGradient-1)" points="21 -9.41469125e-14 86.5254344 -9.41469125e-14 108 20.3885549 0 20.3885549"></polygon>
+                </g>
+                <g id="Stage-1" transform="translate(85.000000, 0.000000)">
+                    <polygon id="Rectangle" fill="url(#linearGradient-2)" points="0 20.3885549 108 20.3885549 90.4375195 136.388555 16.8032217 136.388555"></polygon>
+                    <polygon id="Rectangle" fill="url(#linearGradient-1)" points="21 1.33226763e-13 86.5254344 1.33226763e-13 108 20.3885549 0 20.3885549"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
