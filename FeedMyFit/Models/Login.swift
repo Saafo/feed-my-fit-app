@@ -13,7 +13,7 @@ import Foundation
 
 //MARK - Return
 
-struct Register {
+struct Login {
     
     var Id: String?
     var Token: String?
