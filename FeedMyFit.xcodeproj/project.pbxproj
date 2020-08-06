@@ -22,6 +22,9 @@
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
+		FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */; };
+		FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */; };
+		FE6462B124DC44E5004131EA /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AE24DC44E5004131EA /* Nutrition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
 		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
 		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
+		FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Get.swift"; sourceTree = "<group>"; };
+		FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Post.swift"; sourceTree = "<group>"; };
+		FE6462AE24DC44E5004131EA /* Nutrition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 		837EEBD324BF0C4F002B4C0A /* FeedMyFit */ = {
 			isa = PBXGroup;
 			children = (
+				FE6462AB24DC44E5004131EA /* Models */,
 				837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */,
 				838A829024BF188400D84B3D /* UI */,
 				838A828F24BF186700D84B3D /* Resources */,
@@ -194,6 +201,16 @@
 				8300856E24C05105004BE80D /* Me */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		FE6462AB24DC44E5004131EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */,
+				FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */,
+				FE6462AE24DC44E5004131EA /* Nutrition.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,9 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */,
 				837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */,
+				FE6462B124DC44E5004131EA /* Nutrition.swift in Sources */,
 				8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */,
 				837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */,
+				FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
