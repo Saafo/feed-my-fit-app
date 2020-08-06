@@ -1,23 +1,19 @@
 //
-//  Statistic.swift
+//  Poststatistic.swift
 //  FeedMyFit
 //
 //  Created by 祁汝鑫 on 2020/8/6.
 //
 
 import Foundation
+import
 
 //MARK - Request
 
-// Id=xxxxxxxx&Token=xxxxxxx&GetAll=true&Date=none
-// 或者
-// Id=xxxxxxxx&Token=xxxxxxx&GetAll=false&Date=20200401
-
-//MARK - Return
-
-struct Getstatistic: Codable {
+struct Poststatistic: Codable {
     
-    var Date: Date
+    var Date: st
+    var HealthState: HealthStateType
     var HeatQuantity: Int
     var HeatQuantityDiff: Int
     var Protein: Int
@@ -44,18 +40,5 @@ struct Getstatistic: Codable {
     var VitaminEDiff: Int
     var VitaminK: Int
     var VitaminKDiff: Int
-    
-    struct Date: Codable {
-    
-        var HealthState: HealthStateType
-    
-    }
-    
-    enum HealthStateType: String, Codable {
-        case Healthy
-        case Sub_healthy
-        case Need_improve
-    
-    }
     
 }
