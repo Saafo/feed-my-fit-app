@@ -1,12 +1,13 @@
 //
-//  Models for JSON Post.swift
+//  Updatedata.swift
 //  FeedMyFit
 //
 //  Created by 祁汝鑫 on 2020/8/6.
 //
 
 import Foundation
-import SwiftUI
+
+//MARK - Request
 
 struct Updatedata: Codable {
    
@@ -36,6 +37,12 @@ struct Updatedata: Codable {
         var VitaminDDemand: Int
         var VitaminEDemand: Int
         var VitaminKDemand: Int
+    
     }
 
 }
+
+
+//MARK - Response
+
+//void

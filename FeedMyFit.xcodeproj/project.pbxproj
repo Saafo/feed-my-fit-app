@@ -22,13 +22,14 @@
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
-		FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */; };
-		FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */; };
 		FE6462B324DC4E1C004131EA /* Postcomment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462B224DC4E1C004131EA /* Postcomment.swift */; };
 		FE6462B524DC50D7004131EA /* Regist.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462B424DC50D7004131EA /* Regist.swift */; };
 		FE6462B724DC5216004131EA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462B624DC5216004131EA /* Login.swift */; };
 		FE6462B924DC524F004131EA /* Updatetoken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462B824DC524F004131EA /* Updatetoken.swift */; };
 		FE6462BB24DC533A004131EA /* Selfinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462BA24DC533A004131EA /* Selfinfo.swift */; };
+		FE6462BD24DC5401004131EA /* Publicinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462BC24DC5401004131EA /* Publicinfo.swift */; };
+		FE6462BF24DC5536004131EA /* Updatedata.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462BE24DC5536004131EA /* Updatedata.swift */; };
+		FE6462C124DC5594004131EA /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462C024DC5594004131EA /* Statistic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +70,14 @@
 		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
 		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
 		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
-		FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Get.swift"; sourceTree = "<group>"; };
-		FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Post.swift"; sourceTree = "<group>"; };
 		FE6462B224DC4E1C004131EA /* Postcomment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postcomment.swift; sourceTree = "<group>"; };
 		FE6462B424DC50D7004131EA /* Regist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regist.swift; sourceTree = "<group>"; };
 		FE6462B624DC5216004131EA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FE6462B824DC524F004131EA /* Updatetoken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatetoken.swift; sourceTree = "<group>"; };
 		FE6462BA24DC533A004131EA /* Selfinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selfinfo.swift; sourceTree = "<group>"; };
+		FE6462BC24DC5401004131EA /* Publicinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publicinfo.swift; sourceTree = "<group>"; };
+		FE6462BE24DC5536004131EA /* Updatedata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updatedata.swift; sourceTree = "<group>"; };
+		FE6462C024DC5594004131EA /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,13 +216,14 @@
 		FE6462AB24DC44E5004131EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */,
-				FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */,
-				FE6462B224DC4E1C004131EA /* Postcomment.swift */,
 				FE6462B424DC50D7004131EA /* Regist.swift */,
 				FE6462B624DC5216004131EA /* Login.swift */,
 				FE6462B824DC524F004131EA /* Updatetoken.swift */,
 				FE6462BA24DC533A004131EA /* Selfinfo.swift */,
+				FE6462BC24DC5401004131EA /* Publicinfo.swift */,
+				FE6462BE24DC5536004131EA /* Updatedata.swift */,
+				FE6462C024DC5594004131EA /* Statistic.swift */,
+				FE6462B224DC4E1C004131EA /* Postcomment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,18 +366,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE6462B524DC50D7004131EA /* Regist.swift in Sources */,
-				FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */,
 				FE6462B324DC4E1C004131EA /* Postcomment.swift in Sources */,
 				837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */,
+				FE6462BF24DC5536004131EA /* Updatedata.swift in Sources */,
+				FE6462C124DC5594004131EA /* Statistic.swift in Sources */,
 				8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */,
 				FE6462B924DC524F004131EA /* Updatetoken.swift in Sources */,
 				837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */,
-				FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */,
 				FE6462B724DC5216004131EA /* Login.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
 				8300857124C05938004BE80D /* RankListView.swift in Sources */,
+				FE6462BD24DC5401004131EA /* Publicinfo.swift in Sources */,
 				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
 				83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */,
 				FE6462BB24DC533A004131EA /* Selfinfo.swift in Sources */,
