@@ -9,17 +9,35 @@ import SwiftUI
 
 struct RankListView: View {
     @State var listChoioce = 0
-    var ranklists = ["健康值排行", "坚持记录排行"]
-    var list = [
-        UserRank(id: 4, username: "薛浍人", avatar: "Avatar5", score: 96, rank: 4),
-        UserRank(id: 5, username: "段苹苹", avatar: "Avatar6", score: 96, rank: 5),
-        UserRank(id: 6, username: "唐可可", avatar: "Avatar7", score: 94, rank: 6),
-        UserRank(id: 7, username: "史萌", avatar: "Avatar8", score: 93, rank: 7)
+    let ranklists = ["健康值排行", "坚持记录排行"]
+    let healthyData: [String: [UserRank]] = [
+        "Stage": [
+            UserRank(id: 1, username: "许遄侠", avatar: "Avatar2", score: 100, rank: 1),
+            UserRank(id: 2, username: "方笔笔", avatar: "Avatar3", score: 99, rank: 2),
+            UserRank(id: 3, username: "丁彤", avatar: "Avatar4", score: 97, rank: 3)
+        ],//一定要按1 2 3的list顺序排！
+        "Me": [
+            UserRank(id: 0, username: "蒋冉冉", avatar: "Avatar1", score: 94, rank: 6)
+        ],
+        "List": [
+            UserRank(id: 4, username: "薛浍人", avatar: "Avatar5", score: 96, rank: 4),
+            UserRank(id: 5, username: "段苹苹", avatar: "Avatar6", score: 96, rank: 5),
+            UserRank(id: 6, username: "唐可可", avatar: "Avatar7", score: 94, rank: 6),
+            UserRank(id: 7, username: "史萌", avatar: "Avatar8", score: 93, rank: 7),
+            UserRank(id: 4, username: "薛浍人", avatar: "Avatar5", score: 96, rank: 8),
+            UserRank(id: 5, username: "段苹苹", avatar: "Avatar6", score: 96, rank: 9),
+            UserRank(id: 6, username: "唐可可", avatar: "Avatar7", score: 94, rank: 10),
+            UserRank(id: 7, username: "史萌", avatar: "Avatar8", score: 93, rank: 11)
+        ]
     ]
     var body: some View {
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(Color("DGrey"))
+                    .frame(width: 87, height: 4, alignment: .center)
+                    .padding(.top, 10)
                 HStack {
                     Text("排行榜")
                         .font(.largeTitle)
@@ -27,7 +45,6 @@ struct RankListView: View {
                         .padding(.horizontal, 20)
                     Spacer()
                 }
-                .padding(.top, 80)
                 Picker("RankLists", selection: $listChoioce) {
                     ForEach(0 ..< ranklists.count) { index in
                         Text(self.ranklists[index])
@@ -36,16 +53,8 @@ struct RankListView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal, 40)
-                HStack {
-                    OnStageView(avatar: "Avatar3", medal: "MedalSilver", username: "方笔笔")
-                        .padding(.top, 20)
-                    OnStageView(avatar: "Avatar2", medal: "MedalGold", username: "许遄侠")
-                    OnStageView(avatar: "Avatar4", medal: "MedalCopper", username: "丁彤")
-                        .padding(.top, 20)
-                }
-                StageView(score1: 100, score2: 99, score3: 97)
-                    .offset(y: -15)
-                ListView(list: list)
+                StageView(stageData: healthyData["Stage"]!)
+                ListView(list: healthyData["List"]!)
                     .offset(y: -50)
             }
         }
@@ -70,7 +79,7 @@ struct ListItemView: View {
         HStack {
             Image(avatar).resizable()
                 .frame(width: 44, height: 44)
-                .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .padding(.trailing, 10)
             VStack(alignment: .leading) {
                 isSelf ?
                     Text("\(username)（我）")
@@ -94,7 +103,7 @@ struct ListItemView: View {
         }
         .frame(height: 44)
         .padding(.horizontal, 25)
-        .padding(.vertical, 10)
+        .padding(.vertical, 5)
     }
 }
 
@@ -105,12 +114,23 @@ struct ListView: View {
             RoundedRectangle(cornerRadius: 38)
                 .foregroundColor(Color("SGreen"))
             VStack {
-                ListItemView(isSelf: true, avatar: "Avatar1", username: "蒋冉冉", score: 76, rank: 206)
-                ForEach(list) { item in
-                    ListItemView(isSelf: false, avatar: item.avatar, username: item.username, score: item.score, rank: item.rank)
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(Color("DGrey"))
+                    .frame(width: 61, height: 4, alignment: .center)
+                    .padding(.top, 10)
+                ScrollView(showsIndicators: false) {
+                    ListItemView(isSelf: true, avatar: "Avatar1", username: "蒋冉冉", score: 76, rank: 206)
+                    Rectangle()
+                        .foregroundColor(Color("SGreen-deep"))
+                        .frame(width: 293, height: 1, alignment: .center)
+                    ForEach(list) { item in
+                        ListItemView(isSelf: false, avatar: item.avatar, username: item.username, score: item.score, rank: item.rank)
+                    }
                 }
+                .frame(height: 320)
             }
         }
+        .padding(.horizontal, 16)
     }
 }
 
@@ -133,32 +153,38 @@ struct OnStageView: View {
 }
 
 struct StageView: View {
-    let score1: Int
-    let score2: Int
-    let score3: Int
+    let stageData: [UserRank]
     var body: some View {
+        HStack {
+            OnStageView(avatar: stageData[1].avatar, medal: "MedalSilver", username: stageData[1].username)
+                .padding(.top, 20)
+            OnStageView(avatar: stageData[0].avatar, medal: "MedalGold", username: stageData[0].username)
+            OnStageView(avatar: stageData[2].avatar, medal: "MedalCopper", username: stageData[2].username)
+                .padding(.top, 20)
+        }
         ZStack {
             Image("RankStage")
             HStack {
-                Text(String(score2))
+                Text(String(stageData[1].score))
                     .font(Font.custom("League Gothic", size: 44))
                     .padding(.horizontal, 24)
-                Text(String(score1))
+                Text(String(stageData[0].score))
                     .font(Font.custom("League Gothic", size: 44))
                     .padding(.horizontal, 24)
                     .offset(y: -10)
-                Text(String(score3))
+                Text(String(stageData[2].score))
                     .font(Font.custom("League Gothic", size: 44))
                     .padding(.horizontal, 24)
             }
             .offset(y: -5)
         }
+            .offset(y: -15)
     }
 }
 
 struct RankListView_Previews: PreviewProvider {
     static var previews: some View {
         RankListView()
-//        ListItemView(isSelf: true, avatar: "Avatar1", username: "蒋冉冉", score: 76, rank: 206)
+            .padding(.top, 50)
     }
 }
