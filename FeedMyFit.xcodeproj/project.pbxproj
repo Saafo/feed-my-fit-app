@@ -24,7 +24,6 @@
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
 		FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */; };
 		FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */; };
-		FE6462B124DC44E5004131EA /* Nutrition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6462AE24DC44E5004131EA /* Nutrition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +66,6 @@
 		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
 		FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Get.swift"; sourceTree = "<group>"; };
 		FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Models for JSON Post.swift"; sourceTree = "<group>"; };
-		FE6462AE24DC44E5004131EA /* Nutrition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nutrition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +206,6 @@
 			children = (
 				FE6462AC24DC44E5004131EA /* Models for JSON Get.swift */,
 				FE6462AD24DC44E5004131EA /* Models for JSON Post.swift */,
-				FE6462AE24DC44E5004131EA /* Nutrition.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,7 +349,6 @@
 			files = (
 				FE6462B024DC44E5004131EA /* Models for JSON Post.swift in Sources */,
 				837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */,
-				FE6462B124DC44E5004131EA /* Nutrition.swift in Sources */,
 				8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */,
 				837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */,
 				FE6462AF24DC44E5004131EA /* Models for JSON Get.swift in Sources */,

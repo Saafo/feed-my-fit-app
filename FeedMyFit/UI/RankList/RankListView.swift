@@ -69,7 +69,7 @@ struct ListItemView: View {
     var body: some View {
         HStack {
             Image(avatar).resizable()
-                .frame(width: 50, height: 50)
+                .frame(width: 44, height: 44)
                 .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             VStack(alignment: .leading) {
                 isSelf ?
@@ -85,7 +85,7 @@ struct ListItemView: View {
             ZStack {
                 Circle()
                     .foregroundColor(Color("SGreen"))
-                    .frame(width: 50, height: 50)
+                    .frame(width: 40, height: 40)
                     .shadow(color: Color(.white),radius: 8, x: -4, y: -4)
                     .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 8,x: 4,y: 4)
                 Text(String(rank))
