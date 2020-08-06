@@ -6,13 +6,12 @@
 //
 
 import Foundation
-import
 
 //MARK - Request
 
 struct Poststatistic: Codable {
     
-    var Date: st
+    var Date: String
     var HealthState: HealthStateType
     var HeatQuantity: Int
     var HeatQuantityDiff: Int
