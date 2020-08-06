@@ -40,4 +40,12 @@ struct Poststatistic: Codable {
     var VitaminK: Int
     var VitaminKDiff: Int
     
+    enum HealthStateType: String, Codable {
+        case Healthy
+        case Sub_healthy
+        case Need_improve
+    
+    }
+    
+    
 }
