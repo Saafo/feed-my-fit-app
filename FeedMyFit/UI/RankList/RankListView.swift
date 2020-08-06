@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RankListView: View {
     @State var listChoioce = 0
-    let ranklists = ["健康值排行", "坚持记录排行"]
-    let healthyData: [String: [UserRank]] = [
+    let ranklists = ["健康值排行", "坚持记录排行"] // Picker标题
+    let healthyData: [String: [UserRank]] = [ // 健康值排行数据
         "Stage": [
             UserRank(id: 1, username: "许遄侠", avatar: "Avatar2", score: 100, rank: 1),
             UserRank(id: 2, username: "方笔笔", avatar: "Avatar3", score: 99, rank: 2),
@@ -53,15 +53,15 @@ struct RankListView: View {
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(.horizontal, 40)
-                StageView(stageData: healthyData["Stage"]!)
-                ListView(list: healthyData["List"]!)
-                    .offset(y: -50)
+                StageView(stageData: healthyData["Stage"]!) //领奖台
+                ListView(me: healthyData["Me"]![0], list: healthyData["List"]!)
+                    .offset(y: -50) //列表
             }
         }
     }
 }
 
-struct UserRank: Identifiable {
+struct UserRank: Identifiable { //用户排名信息
     var id: Int
     var username: String
     var avatar: String
@@ -108,6 +108,7 @@ struct ListItemView: View {
 }
 
 struct ListView: View {
+    var me: UserRank
     var list: [UserRank]
     var body: some View {
         ZStack {
@@ -119,7 +120,7 @@ struct ListView: View {
                     .frame(width: 61, height: 4, alignment: .center)
                     .padding(.top, 10)
                 ScrollView(showsIndicators: false) {
-                    ListItemView(isSelf: true, avatar: "Avatar1", username: "蒋冉冉", score: 76, rank: 206)
+                    ListItemView(isSelf: true, avatar: me.avatar, username: me.username, score: me.score, rank: me.rank)
                     Rectangle()
                         .foregroundColor(Color("SGreen-deep"))
                         .frame(width: 293, height: 1, alignment: .center)
