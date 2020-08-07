@@ -10,8 +10,8 @@ import SwiftUI
 
 class Api {
     
-    func logIn(phoneNub: String, key: String, completion: @escaping(_ token: String)) -> () {
-        let <#name#> = <#value#>
-        
-    }
+//    func logIn(phoneNub: String, key: String, completion: @escaping(_ token: String)) -> () {
+//        let <#name#> = <#value#>
+//
+//    }
 }
