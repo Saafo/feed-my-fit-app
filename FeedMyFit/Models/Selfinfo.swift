@@ -7,13 +7,13 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 // Id=xxxxxxx&Token=xxxxxxx
 
-//MARK - Return
+// MARK: - Return
 
-struct UserSelfData: Codable {
+struct Selfinfo: Codable {
    
     var Phonenumber: String
     var Avatar: String?

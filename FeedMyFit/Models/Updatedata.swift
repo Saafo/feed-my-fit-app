@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 struct Updatedata: Codable {
    
@@ -43,6 +43,6 @@ struct Updatedata: Codable {
 }
 
 
-//MARK - Response
+// MARK: - Response
 
 //void

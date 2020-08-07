@@ -7,18 +7,18 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 // Id=xxxxxxx&Token=xxxxxxx&Getid=zzzzzz //Getid为需要获取的用户id
 
-//MARK - Return
+// MARK: - Return
 
-struct UserPublicData: Codable {
+struct Publicinfo: Codable {
     
     var Id: String?
     var Avatar: String?
     var Username: String
     var Sex: String
     var City: String
-    
+    var Streak: Int
 }

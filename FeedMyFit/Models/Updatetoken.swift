@@ -7,13 +7,13 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 // Id=xxxxxxx&Token=xxxxxxx
 
-//MARK - Return
+// MARK: - Return
 
-struct TokenUpdate {
+struct Updatetoken {
     
     var Token: String?
 

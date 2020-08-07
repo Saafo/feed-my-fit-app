@@ -7,7 +7,7 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 struct PostcommentRequest: Codable {
     
@@ -19,7 +19,7 @@ struct PostcommentRequest: Codable {
     
 }
 
-//MARK - Response
+// MARK: - Response
 
 struct PostcommentResponse: Codable {
     

@@ -7,11 +7,11 @@
 
 import Foundation
 
-//MARK - Request
+// MARK: - Request
 
 // PhoneNum=12345678901&Key=367b61b333c242a4253cfacfe6ea709f
 
-//MARK - Return
+// MARK: - Return
 
 struct Login {
     
