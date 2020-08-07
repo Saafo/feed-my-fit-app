@@ -9,21 +9,21 @@ import SwiftUI
 
 struct MomentsView: View {
     var momentsData = [
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: UserPublicData(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17))
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic2"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17))
     ]
     var body: some View {
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack {
                 HStack {
-                    Text("排行榜")
+                    Text("广场")
                         .font(.largeTitle)
                         .bold()
                         .padding(.horizontal, 20)
@@ -34,12 +34,12 @@ struct MomentsView: View {
                     HStack {
                         VStack {
                             ForEach(momentsData[0..<(momentsData.count/2)]) { item in
-                                MomentCardView(momentinfo: item)
+                                MomentCardView(momentInfo: item)
                             }
                         }
                         VStack {
                             ForEach(momentsData[(momentsData.count/2)...]) { item in
-                                MomentCardView(momentinfo: item)
+                                MomentCardView(momentInfo: item)
                             }
                         }
                     }
@@ -53,7 +53,7 @@ struct MomentInfo: Identifiable { //动态基本信息
     var id = UUID()
     var pic: Image
     var content: String
-    var userInfo: UserPublicData
+    var userInfo: Publicinfo
 //    var likeNum: Int // TODO here
     var liked: Bool = false
 }
