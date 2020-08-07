@@ -18,6 +18,7 @@
 		837EEBE724BF0C52002B4C0A /* FeedMyFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBE624BF0C52002B4C0A /* FeedMyFitTests.swift */; };
 		837EEBF224BF0C52002B4C0A /* FeedMyFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBF124BF0C52002B4C0A /* FeedMyFitUITests.swift */; };
 		837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBFF24BF0F68002B4C0A /* MeView.swift */; };
+		83B46C5A24DCF60D00036BD0 /* MomentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B46C5924DCF60D00036BD0 /* MomentsView.swift */; };
 		83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */; };
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
@@ -66,6 +67,7 @@
 		837EEBF124BF0C52002B4C0A /* FeedMyFitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyFitUITests.swift; sourceTree = "<group>"; };
 		837EEBF324BF0C52002B4C0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		837EEBFF24BF0F68002B4C0A /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
+		83B46C5924DCF60D00036BD0 /* MomentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsView.swift; sourceTree = "<group>"; };
 		83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeNotificationCenterView.swift; sourceTree = "<group>"; };
 		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
 		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
@@ -206,11 +208,20 @@
 		838A829024BF188400D84B3D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				83B46C5824DCF5F000036BD0 /* Moments */,
 				837EEBD624BF0C4F002B4C0A /* ContentView.swift */,
 				8300856F24C0590A004BE80D /* RankList */,
 				8300856E24C05105004BE80D /* Me */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		83B46C5824DCF5F000036BD0 /* Moments */ = {
+			isa = PBXGroup;
+			children = (
+				83B46C5924DCF60D00036BD0 /* MomentsView.swift */,
+			);
+			path = Moments;
 			sourceTree = "<group>";
 		};
 		FE6462AB24DC44E5004131EA /* Models */ = {
@@ -375,6 +386,7 @@
 				FE6462B724DC5216004131EA /* Login.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
+				83B46C5A24DCF60D00036BD0 /* MomentsView.swift in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
 				FE6462C324DC5650004131EA /* Poststatistic.swift in Sources */,
 				8300857124C05938004BE80D /* RankListView.swift in Sources */,

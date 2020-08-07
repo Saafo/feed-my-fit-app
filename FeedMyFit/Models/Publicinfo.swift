@@ -20,5 +20,5 @@ struct UserPublicData: Codable {
     var Username: String
     var Sex: String
     var City: String
-    
+    var Streak: Int
 }
