@@ -31,17 +31,19 @@ struct MomentsView: View {
                 }
                 .padding(.top, 25)
                 ScrollView(showsIndicators: false) {
-                    HStack {
-                        VStack {
+                    HStack(alignment: .top) {
+                        LazyVStack {
                             ForEach(momentsData[0..<(momentsData.count/2)]) { item in
                                 MomentCardView(momentInfo: item)
                             }
                         }
-                        VStack {
+                            .frame(width: 163)
+                        LazyVStack {
                             ForEach(momentsData[(momentsData.count/2)...]) { item in
                                 MomentCardView(momentInfo: item)
                             }
                         }
+                            .frame(width: 163)
                     }
                 }
             }
