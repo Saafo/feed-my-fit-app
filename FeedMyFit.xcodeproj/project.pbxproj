@@ -10,7 +10,7 @@
 		8300856B24C03BA5004BE80D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8300856A24C03BA5004BE80D /* SwiftUICharts */; };
 		8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300856C24C0494C004BE80D /* MeFeedbackView.swift */; };
 		8300857124C05938004BE80D /* RankListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8300857024C05938004BE80D /* RankListView.swift */; };
-		83641A6924C0836F00C5619A /* LeagueGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83641A6824C0810300C5619A /* LeagueGothic.otf */; };
+		83641A6924C0836F00C5619A /* League Gothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83641A6824C0810300C5619A /* League Gothic.otf */; };
 		837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */; };
 		837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBD624BF0C4F002B4C0A /* ContentView.swift */; };
 		837EEBD924BF0C51002B4C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 837EEBD824BF0C51002B4C0A /* Assets.xcassets */; };
@@ -18,6 +18,9 @@
 		837EEBE724BF0C52002B4C0A /* FeedMyFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBE624BF0C52002B4C0A /* FeedMyFitTests.swift */; };
 		837EEBF224BF0C52002B4C0A /* FeedMyFitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBF124BF0C52002B4C0A /* FeedMyFitUITests.swift */; };
 		837EEC0024BF0F68002B4C0A /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837EEBFF24BF0F68002B4C0A /* MeView.swift */; };
+		83A5920524E301470091D497 /* Comfortaa Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */; };
+		83A5920624E3014B0091D497 /* Comfortaa Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE0629EF24E2BFCC00D77DA0 /* Comfortaa Light.ttf */; };
+		83A5920724E3014E0091D497 /* Comfortaa Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */; };
 		83B46C5A24DCF60D00036BD0 /* MomentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B46C5924DCF60D00036BD0 /* MomentsView.swift */; };
 		83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508424BF3C8600DD40C5 /* MeNotificationCenterView.swift */; };
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
@@ -56,7 +59,7 @@
 /* Begin PBXFileReference section */
 		8300856C24C0494C004BE80D /* MeFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeFeedbackView.swift; sourceTree = "<group>"; };
 		8300857024C05938004BE80D /* RankListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListView.swift; sourceTree = "<group>"; };
-		83641A6824C0810300C5619A /* LeagueGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeagueGothic.otf; sourceTree = "<group>"; };
+		83641A6824C0810300C5619A /* League Gothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "League Gothic.otf"; sourceTree = "<group>"; };
 		837EEBD124BF0C4F002B4C0A /* FeedMyFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedMyFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMyFitApp.swift; sourceTree = "<group>"; };
 		837EEBD624BF0C4F002B4C0A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,9 +78,9 @@
 		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
 		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
 		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
-		FE0629EF24E2BFCC00D77DA0 /* Comfortaa-Light-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light-3.ttf"; sourceTree = "<group>"; };
+		FE0629EF24E2BFCC00D77DA0 /* Comfortaa Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Light.ttf"; sourceTree = "<group>"; };
 		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
-		FE0629F124E2BFCC00D77DA0 /* Comfortaa-Regular-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular-1.ttf"; sourceTree = "<group>"; };
+		FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Regular.ttf"; sourceTree = "<group>"; };
 		FE801E1A24E28C1900A7B90E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		FECD940124DD9B17009BAC3B /* Selfinfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfinfo.swift; sourceTree = "<group>"; };
 		FECD940224DD9B17009BAC3B /* Statistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
@@ -142,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */,
-				FE0629EF24E2BFCC00D77DA0 /* Comfortaa-Light-3.ttf */,
-				FE0629F124E2BFCC00D77DA0 /* Comfortaa-Regular-1.ttf */,
-				83641A6824C0810300C5619A /* LeagueGothic.otf */,
+				FE0629EF24E2BFCC00D77DA0 /* Comfortaa Light.ttf */,
+				FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */,
+				83641A6824C0810300C5619A /* League Gothic.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -373,8 +376,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				837EEBDC24BF0C51002B4C0A /* Preview Assets.xcassets in Resources */,
-				83641A6924C0836F00C5619A /* LeagueGothic.otf in Resources */,
+				83A5920624E3014B0091D497 /* Comfortaa Light.ttf in Resources */,
+				83A5920724E3014E0091D497 /* Comfortaa Regular.ttf in Resources */,
+				83641A6924C0836F00C5619A /* League Gothic.otf in Resources */,
 				837EEBD924BF0C51002B4C0A /* Assets.xcassets in Resources */,
+				83A5920524E301470091D497 /* Comfortaa Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

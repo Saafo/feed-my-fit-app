@@ -20,6 +20,13 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>League Gothic.otf</string>
+		<string>Comfortaa Light.ttf</string>
+		<string>Comfortaa Regular.ttf</string>
+		<string>Comfortaa Bold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -45,11 +52,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Comfortaa Bold.ttf</string>
-		<string>LeagueGothic.otf</string>
 	</array>
 </dict>
 </plist>
