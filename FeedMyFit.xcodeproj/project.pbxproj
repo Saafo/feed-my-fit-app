@@ -75,6 +75,9 @@
 		83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeCollectionsView.swift; sourceTree = "<group>"; };
 		83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeDataCenterView.swift; sourceTree = "<group>"; };
 		83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MePersonalCenterView.swift; sourceTree = "<group>"; };
+		FE0629EF24E2BFCC00D77DA0 /* Comfortaa-Light-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light-3.ttf"; sourceTree = "<group>"; };
+		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
+		FE0629F124E2BFCC00D77DA0 /* Comfortaa-Regular-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular-1.ttf"; sourceTree = "<group>"; };
 		FE801E1A24E28C1900A7B90E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		FECD940124DD9B17009BAC3B /* Selfinfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfinfo.swift; sourceTree = "<group>"; };
 		FECD940224DD9B17009BAC3B /* Statistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
@@ -138,6 +141,9 @@
 		83641A6724C080A800C5619A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */,
+				FE0629EF24E2BFCC00D77DA0 /* Comfortaa-Light-3.ttf */,
+				FE0629F124E2BFCC00D77DA0 /* Comfortaa-Regular-1.ttf */,
 				83641A6824C0810300C5619A /* LeagueGothic.otf */,
 			);
 			path = Fonts;

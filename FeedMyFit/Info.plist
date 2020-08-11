@@ -48,6 +48,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Comfortaa Bold.ttf</string>
 		<string>LeagueGothic.otf</string>
 	</array>
 </dict>

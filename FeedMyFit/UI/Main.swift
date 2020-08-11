@@ -19,7 +19,7 @@ struct MainView: View {
             VStack(spacing: 0) {
                 
                 Text("Feed My Fit")
-                    .font(Font.custom("Comfortaa-Bold", size: 51))
+                    .font(Font.custom("Comfortaa Bold", size: 51))
                     .foregroundColor(Color(red: 179/255, green: 216/255, blue: 174/255))
                     .frame(width: 309, height: 64, alignment: .center)
                     .padding(.top, 48)
