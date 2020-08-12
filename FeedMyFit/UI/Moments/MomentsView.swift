@@ -37,6 +37,9 @@ struct MomentsView: View {
                         }
                     }
                         .frame(width: 163)
+                        .padding(.leading, 16)
+                    Spacer()
+                        .frame(maxWidth: 18)
                     LazyVStack {
                         ForEach(momentsData[(momentsData.count/2)...]) { item in
                             MomentCardView(momentInfo: item)
@@ -44,6 +47,7 @@ struct MomentsView: View {
                         }
                     }
                         .frame(width: 163)
+                        .padding(.trailing, 16)
                 }
                 .frame(width: W)
             }

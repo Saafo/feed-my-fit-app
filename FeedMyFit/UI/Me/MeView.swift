@@ -43,12 +43,11 @@ struct MeView: View {
                     TinyCardView(title: "关于\nFeedMyFit", icon: "heart", systemIcon: true, color: Color("SRed"), height: 111, dest: MeFeedbackView())
                 }
             }
-            .padding(.top, 17)
+                .padding(.top, 17)
             Spacer()
-            
+                .frame(height: 30)
         }
         .padding(.horizontal, 16.0)
-        .padding(.top, 25)
     }
 }
 

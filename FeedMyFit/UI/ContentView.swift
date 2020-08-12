@@ -19,7 +19,7 @@ struct ContentView: View {
         
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(.all)
-            LazyHStack(spacing:0){
+            LazyHStack(alignment: .top, spacing:0){
                 MeView().frame(width: W)
                 MainView().frame(width: W)
                 MomentsView().frame(width: W)
