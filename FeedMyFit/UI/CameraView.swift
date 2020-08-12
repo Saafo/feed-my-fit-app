@@ -24,11 +24,11 @@ struct CameraView: View {
                     
                     HStack(spacing: 117){
                         
-                        Image("Flashlight-false").resizable().scaledToFit().frame(width: 22, height: 28, alignment: .center)
+                        Image(systemName: "bolt.slash").resizable().scaledToFit().frame(width: 25, height: 33, alignment: .center).font(.system(size: 56.0, weight: .light)).foregroundColor(Color(UIColor.white))
                         
-                        Image("Flashlight-auto").resizable().scaledToFit().frame(width: 22, height: 28, alignment: .center)
-                        
-                        Image("Flashlight-true").resizable().scaledToFit().frame(width: 22, height: 28, alignment: .center)
+                        Image(systemName: "bolt.badge.a").resizable().scaledToFit().frame(width: 25, height: 33, alignment: .center).font(.system(size: 56.0, weight: .light)).foregroundColor(Color(UIColor.yellow))
+
+                        Image(systemName: "bolt.fill").resizable().scaledToFit().frame(width: 25, height: 33, alignment: .center).font(.system(size: 56.0, weight: .light)).foregroundColor(Color(UIColor.white))
                     
                     }.padding(.top, 35)
                 }
