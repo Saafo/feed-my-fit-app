@@ -8,34 +8,50 @@
 import SwiftUI
 
 let W = UIScreen.main.bounds.width
-let H = UIScreen.main.bounds.width
+let H = UIScreen.main.bounds.height
 
 struct ContentView: View {
     
-    @State var page = 1
+    @State var wPage = 1
+    @State var hPage = 1
     @State var position = CGSize.zero
     
     var body: some View {
         
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(.all)
-            LazyHStack(alignment: .top, spacing:0){
+            VStack(spacing: 0){
+                
+                CameraView().frame(width: W, height: H)
+                
+                LazyHStack(alignment: .top, spacing:0){
                 MeView().frame(width: W)
-                MainView().frame(width: W)
+                    
+                MainView().frame(width: W, height: H)
+            
                 MomentsView().frame(width: W)
-            }
-            .offset(x: CGFloat(2-self.page*2)/2*W + position.width)
+                    
+                }
+                
+            }.frame(height: 2*H)
+            .padding(.bottom, H)
+            .offset(x: CGFloat(2-self.wPage*2)/2*W + position.width)
+            .offset(y: CGFloat(2-self.hPage*2)/2*H + position.height)
             .gesture(DragGesture().onChanged{value in
                 self.position = value.translation
             }.onEnded{value in
-                if self.page == 0 && value.translation.width < -0.4*W{
-                    self.page = 1
-                }else if self.page == 1 && value.translation.width < -0.4*W{
-                    self.page = 2
-                }else if self.page == 2 && value.translation.width > 0.4*W{
-                    self.page = 1
-                }else if self.page == 1 && value.translation.width > 0.4*W{
-                    self.page = 0
+                if self.wPage == 0 && value.translation.width < -0.4*W{
+                    self.wPage = 1
+                }else if self.wPage == 1 && value.translation.width < -0.4*W{
+                    self.wPage = 2
+                }else if self.wPage == 2 && value.translation.width > 0.4*W{
+                    self.wPage = 1
+                }else if self.wPage == 1 && value.translation.width > 0.4*W{
+                    self.wPage = 0
+                }else if self.hPage == 1 && value.translation.height > 0.4*H{
+                    self.hPage = 0
+                }else if self.hPage == 0 && value.translation.height < -0.4*H{
+                    self.hPage = 1
                 }
                 self.position = .zero
             })
