@@ -18,6 +18,8 @@ struct MeView: View {
     var body: some View {
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .edgesIgnoringSafeArea(.all)
             VStack(spacing: 0) {
                 HStack {
                     Text("我的")
@@ -66,7 +68,7 @@ struct BigCardView<destType: View>: View {
     var height: Int
     var dest: destType
     var body: some View {
-        let chartstyle = ChartStyle(backgroundColor: Color("DBGColor"), accentColor: Color.green, secondGradientColor: Color.green, textColor: Color.black, legendTextColor: Color("DGray"), dropShadowColor: Color.clear)
+        let chartstyle = ChartStyle(backgroundColor: Color("DBGColor"), accentColor: Color.green, secondGradientColor: Color.green, textColor: Color.black, legendTextColor: Color("DGrey"), dropShadowColor: Color.clear)
         LineChartView(data: scoreArray, title: "数据中心", style: chartstyle)
             .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
@@ -102,11 +104,11 @@ struct MediumCardView<destType: View>: View {
                         .font(.title3)
                         .padding(.bottom, 15)
                     Text(username)
-                        .foregroundColor(Color("DGray"))
+                        .foregroundColor(Color("DGrey"))
                         .font(.callout)
                         .padding(.bottom, 5)
                     Text(content)
-                        .foregroundColor(Color("DGray"))
+                        .foregroundColor(Color("DGrey"))
                         .font(.callout)
                 }
                 .padding(.horizontal, 5)
@@ -159,7 +161,7 @@ struct SmallCardView<destType: View>: View {
                             .font(Font.title.weight(.regular))
                             .foregroundColor(Color(color))
                     }else{
-                        Image(icon).resizable()
+                        Image(icon).resizable().scaledToFit()
                             .frame(width: 40, height: 40)
                             .padding(.trailing, 5)
                             .foregroundColor(Color(color))
