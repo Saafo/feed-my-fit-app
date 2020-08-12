@@ -25,19 +25,19 @@
       "size" : "29x29"
     },
     {
-      "filename" : "FeedMyFit-icon@80px-1.png",
+      "filename" : "FeedMyFit-icon@80px.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "FeedMyFit-icon@120px-1.png",
+      "filename" : "FeedMyFit-icon@120px.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "FeedMyFit-icon@120px.png",
+      "filename" : "FeedMyFit-icon@120px-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
@@ -79,7 +79,7 @@
       "size" : "40x40"
     },
     {
-      "filename" : "FeedMyFit-icon@80px.png",
+      "filename" : "FeedMyFit-icon@80px-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
