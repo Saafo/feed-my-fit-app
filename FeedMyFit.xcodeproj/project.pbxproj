@@ -27,6 +27,9 @@
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
 		FE801E1B24E28C1900A7B90E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* Main.swift */; };
+		FEC1418524E4075F00E08499 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418424E4075F00E08499 /* CameraController.swift */; };
+		FEC1418724E4082700E08499 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418624E4082700E08499 /* CameraView.swift */; };
+		FEC1418924E40A0600E08499 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418824E40A0600E08499 /* CameraViewController.swift */; };
 		FECD940A24DD9B19009BAC3B /* Selfinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD940124DD9B17009BAC3B /* Selfinfo.swift */; };
 		FECD940B24DD9B19009BAC3B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD940224DD9B17009BAC3B /* Statistic.swift */; };
 		FECD940C24DD9B19009BAC3B /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD940324DD9B18009BAC3B /* Comment.swift */; };
@@ -82,6 +85,9 @@
 		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
 		FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Regular.ttf"; sourceTree = "<group>"; };
 		FE801E1A24E28C1900A7B90E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FEC1418424E4075F00E08499 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		FEC1418624E4082700E08499 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		FEC1418824E40A0600E08499 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		FECD940124DD9B17009BAC3B /* Selfinfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Selfinfo.swift; sourceTree = "<group>"; };
 		FECD940224DD9B17009BAC3B /* Statistic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		FECD940324DD9B18009BAC3B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 		837EEBD324BF0C4F002B4C0A /* FeedMyFit */ = {
 			isa = PBXGroup;
 			children = (
+				FEC1418324E4074500E08499 /* Utilities */,
 				FECD941324DD9B29009BAC3B /* BackStage */,
 				FE6462AB24DC44E5004131EA /* Models */,
 				837EEBD424BF0C4F002B4C0A /* FeedMyFitApp.swift */,
@@ -229,6 +236,7 @@
 				8300856F24C0590A004BE80D /* RankList */,
 				8300856E24C05105004BE80D /* Me */,
 				FE801E1A24E28C1900A7B90E /* Main.swift */,
+				FEC1418624E4082700E08499 /* CameraView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,6 +263,15 @@
 				FECD940424DD9B18009BAC3B /* Updatetoken.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FEC1418324E4074500E08499 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FEC1418424E4075F00E08499 /* CameraController.swift */,
+				FEC1418824E40A0600E08499 /* CameraViewController.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		FECD941324DD9B29009BAC3B /* BackStage */ = {
@@ -410,7 +427,9 @@
 				FECD941024DD9B19009BAC3B /* Persistence.swift in Sources */,
 				8300856D24C0494C004BE80D /* MeFeedbackView.swift in Sources */,
 				837EEBD724BF0C4F002B4C0A /* ContentView.swift in Sources */,
+				FEC1418924E40A0600E08499 /* CameraViewController.swift in Sources */,
 				FECD940F24DD9B19009BAC3B /* Publicinfo.swift in Sources */,
+				FEC1418524E4075F00E08499 /* CameraController.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
 				83B46C5A24DCF60D00036BD0 /* MomentsView.swift in Sources */,
@@ -422,6 +441,7 @@
 				FECD941524DD9B29009BAC3B /* Apis.swift in Sources */,
 				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
 				FECD940B24DD9B19009BAC3B /* Statistic.swift in Sources */,
+				FEC1418724E4082700E08499 /* CameraView.swift in Sources */,
 				83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */,
 				FECD940E24DD9B19009BAC3B /* Updatedata.swift in Sources */,
 				FECD940A24DD9B19009BAC3B /* Selfinfo.swift in Sources */,
@@ -584,7 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedMyFit/Preview Content\"";
-				DEVELOPMENT_TEAM = LD4V2LN57X;
+				DEVELOPMENT_TEAM = BCV747DTVS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FeedMyFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -592,7 +612,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -606,7 +626,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedMyFit/Preview Content\"";
-				DEVELOPMENT_TEAM = LD4V2LN57X;
+				DEVELOPMENT_TEAM = BCV747DTVS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FeedMyFit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -614,7 +634,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.mintsky.FeedMyFit;
+				PRODUCT_BUNDLE_IDENTIFIER = FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
