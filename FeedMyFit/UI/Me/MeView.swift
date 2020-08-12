@@ -64,8 +64,8 @@ struct BigCardView<destType: View>: View {
     var body: some View {
         let chartstyle = ChartStyle(backgroundColor: Color("DBGColor"), accentColor: Color.green, secondGradientColor: Color.green, textColor: Color.black, legendTextColor: Color("DGrey"), dropShadowColor: Color.clear)
         LineChartView(data: scoreArray, title: "数据中心", style: chartstyle)
-            .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
+            .shadow(color: Color("DWhiteShadow"),radius: 5, x: -2, y: -2)
+            .shadow(color: Color("DBlackShadow"),radius: 5,x: 2,y: 2)
     }
 }
 
@@ -80,8 +80,8 @@ struct MediumCardView<destType: View>: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color("DBGColor"))
-                .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
+                .shadow(color: Color("DWhiteShadow"),radius: 5, x: -2, y: -2)
+                .shadow(color: Color("DBlackShadow"),radius: 5,x: 2,y: 2)
             VStack {
                 HStack {
                     Image(icon).resizable()
@@ -126,8 +126,8 @@ struct SmallCardView<destType: View>: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color("DBGColor"))
-                .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
+                .shadow(color: Color("DWhiteShadow"),radius: 5, x: -2, y: -2)
+                .shadow(color: Color("DBlackShadow"),radius: 5,x: 2,y: 2)
             VStack {
                 HStack {
                     Text(title)
@@ -180,8 +180,8 @@ struct TinyCardView<destType: View>: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color("DBGColor"))
-                .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
+                .shadow(color: Color("DWhiteShadow"),radius: 5, x: -2, y: -2)
+                .shadow(color: Color("DBlackShadow"),radius: 5,x: 2,y: 2)
             HStack {
                 Text(title)
                     .bold()

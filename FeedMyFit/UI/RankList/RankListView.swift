@@ -95,8 +95,8 @@ struct ListItemView: View {
                 Circle()
                     .foregroundColor(Color("SGreen"))
                     .frame(width: 40, height: 40)
-                    .shadow(color: Color(.white),radius: 8, x: -4, y: -4)
-                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 8,x: 4,y: 4)
+                    .shadow(color: Color("DWhiteShadow"),radius: 8, x: -4, y: -4)
+                    .shadow(color: Color("DBlackShadow"),radius: 8,x: 4,y: 4)
                 Text(String(rank))
                     .fontWeight(.semibold)
             }

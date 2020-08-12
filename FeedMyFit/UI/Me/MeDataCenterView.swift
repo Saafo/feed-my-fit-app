@@ -20,8 +20,8 @@ struct MeDataCenterView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .foregroundColor(Color("DBGColor"))
-                .shadow(color: Color(.white),radius: 5, x: -2, y: -2)
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15),radius: 5,x: 2,y: 2)
+                .shadow(color: Color("DWhiteShadow"),radius: 5, x: -2, y: -2)
+                .shadow(color: Color("DBlackShadow"),radius: 5,x: 2,y: 2)
             VStack {
                 HStack {
                     Text(title)

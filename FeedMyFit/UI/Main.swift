@@ -33,13 +33,13 @@ struct SubViewsForNutritions: View {
             RoundedRectangle(cornerRadius: 33)
                 .foregroundColor(Color(red: 237/255, green: 237/255, blue: 237/255))
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
-                .shadow(color: .white, radius: 10, x: -4, y: -4)
+                .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
                 .frame(width: 66, height: 67, alignment: .center)
             
             RoundedRectangle(cornerRadius: 31)
                 .foregroundColor(Color(red: 237/255, green: 237/255, blue: 237/255))
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
-                .shadow(color: .white, radius: 10, x: -4, y: -4)
+                .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
                 .frame(width: 62, height: 63, alignment: .center)
              
             Image(centerImage).resizable().scaledToFit()
@@ -65,7 +65,7 @@ struct TopViewsInMainViews: View {
                 .frame(width: 343, height: 443, alignment: .center)
                 .cornerRadius(25)
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
-                .shadow(color: .white, radius: 10, x: -4, y: -4)
+                .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
         
         }
         .padding(.bottom, 27)
@@ -81,7 +81,7 @@ struct BottomViewsInMainViews: View {
             RoundedRectangle(cornerRadius: 19)
             .foregroundColor(Color("DBGColor"))
             .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
-            .shadow(color: .white, radius: 10, x: -4, y: -4)
+            .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
             .frame(width: 374, height: 213, alignment: .center)
             
             VStack(spacing: 12){
@@ -105,6 +105,7 @@ struct BottomViewsInMainViews: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .preferredColorScheme(.dark)
 
     }
 }

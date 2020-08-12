@@ -71,7 +71,7 @@ struct MomentCardView: View {
             RoundedRectangle(cornerRadius: 20)
                 .foregroundColor(Color("DBGColor"))
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
-                .shadow(color: .white, radius: 10, x: -4, y: -4)
+                .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
             VStack {
                 momentInfo.pic //动态图片
                 Text(momentInfo.content)
