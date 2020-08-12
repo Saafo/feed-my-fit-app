@@ -9,10 +9,12 @@ import Foundation
 import SwiftUI
 
 struct MainView: View {
-
     var body: some View {
+        
         VStack(spacing: 0) {
+        
             TopViewsInMainViews()
+            
             BottomViewsInMainViews()
         }
     }
@@ -42,6 +44,7 @@ struct SubViewsForNutritions: View {
              
             Image(centerImage).resizable().scaledToFit()
                 .frame(width: centerImageSize, height: centerImageSize, alignment: .center)
+       
         }
     }
 }
@@ -63,8 +66,10 @@ struct TopViewsInMainViews: View {
                 .cornerRadius(25)
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
                 .shadow(color: .white, radius: 10, x: -4, y: -4)
+        
         }
         .padding(.bottom, 27)
+    
     }
 }
 
@@ -86,6 +91,7 @@ struct BottomViewsInMainViews: View {
                     SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
                     SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
                 }
+               
                 HStack(spacing: 45){
                     SubViewsForNutritions(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38)
                     SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)

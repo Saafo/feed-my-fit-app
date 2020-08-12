@@ -20,7 +20,7 @@ struct ContentView: View {
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(.all)
             LazyHStack(spacing:0){
-                MeView().frame(width: W, height: H)
+                MeView().frame(width: W)
                 MainView().frame(width: W)
                 MomentsView().frame(width: W)
             }
@@ -39,7 +39,7 @@ struct ContentView: View {
                 }
                 self.position = .zero
             })
-            .frame(width:4*W)
+            .frame(width:3*W)
             .animation(.easeInOut)
         }
     }
