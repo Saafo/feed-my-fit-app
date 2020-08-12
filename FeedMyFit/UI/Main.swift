@@ -11,18 +11,9 @@ import SwiftUI
 struct MainView: View {
 
     var body: some View {
-        ZStack {
-            Color("DBGColor")
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack(spacing: 0) {
-                
-                TopViewsInMainViews()
-                
-                BottomViewsInMainViews()
-                
-            }
+        VStack(spacing: 0) {
+            TopViewsInMainViews()
+            BottomViewsInMainViews()
         }
     }
 }
@@ -91,7 +82,7 @@ struct BottomViewsInMainViews: View {
             VStack(spacing: 12){
                 
                 HStack(spacing: 45){
-                    SubViewsForNutritions(centerImage: "", takeIn: 60, demond: 100, centerImageSize: 53)
+                    SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53)
                     SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
                     SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
                 }

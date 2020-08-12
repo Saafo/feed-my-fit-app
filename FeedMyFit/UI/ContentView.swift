@@ -17,28 +17,31 @@ struct ContentView: View {
     
     var body: some View {
         
-        HStack(spacing:0){
-            MeView().frame(width: W, height: H)
-            MainView().frame(width: W)
-            MomentsView().frame(width: W)
-        }
-        .offset(x: CGFloat(2-self.page*2)/2*W + position.width)
-        .gesture(DragGesture().onChanged{value in
-            self.position = value.translation
-        }.onEnded{value in
-            if self.page == 0 && value.translation.width < -0.4*W{
-                self.page = 1
-            }else if self.page == 1 && value.translation.width < -0.4*W{
-                self.page = 2
-            }else if self.page == 2 && value.translation.width > 0.4*W{
-                self.page = 1
-            }else if self.page == 1 && value.translation.width > 0.4*W{
-                self.page = 0
+        ZStack {
+            Color.init("DBGColor").edgesIgnoringSafeArea(.all)
+            LazyHStack(spacing:0){
+                MeView().frame(width: W, height: H)
+                MainView().frame(width: W)
+                MomentsView().frame(width: W)
             }
-            self.position = .zero
-        })
-        .frame(width:4*W)
-        .animation(.easeInOut)
+            .offset(x: CGFloat(2-self.page*2)/2*W + position.width)
+            .gesture(DragGesture().onChanged{value in
+                self.position = value.translation
+            }.onEnded{value in
+                if self.page == 0 && value.translation.width < -0.4*W{
+                    self.page = 1
+                }else if self.page == 1 && value.translation.width < -0.4*W{
+                    self.page = 2
+                }else if self.page == 2 && value.translation.width > 0.4*W{
+                    self.page = 1
+                }else if self.page == 1 && value.translation.width > 0.4*W{
+                    self.page = 0
+                }
+                self.position = .zero
+            })
+            .frame(width:4*W)
+            .animation(.easeInOut)
+        }
     }
 }
 

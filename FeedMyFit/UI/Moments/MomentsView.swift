@@ -11,41 +11,41 @@ struct MomentsView: View {
     var momentsData = [
         MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
         MomentInfo(pic: Image("Pic2"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic3"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic4"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic5"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
+        MomentInfo(pic: Image("Pic6"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
         MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17)),
-        MomentInfo(pic: Image("Pic1"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17))
+        MomentInfo(pic: Image("Pic2"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17))
     ]
     var body: some View {
-        ZStack {
-            Color.init("DBGColor").edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            VStack {
-                HStack {
-                    Text("广场")
-                        .font(.largeTitle)
-                        .bold()
-                        .padding(.horizontal, 20)
-                    Spacer()
-                }
-                .padding(.top, 25)
-                ScrollView(showsIndicators: false) {
-                    HStack(alignment: .top) {
-                        LazyVStack {
-                            ForEach(momentsData[0..<(momentsData.count/2)]) { item in
-                                MomentCardView(momentInfo: item)
-                            }
+        VStack {
+            HStack {
+                Text("广场")
+                    .font(.largeTitle)
+                    .bold()
+                    .padding(.horizontal, 20)
+                Spacer()
+            }
+            .padding(.top, 25)
+            ScrollView(showsIndicators: false) {
+                HStack(alignment: .top) {
+                    LazyVStack {
+                        ForEach(momentsData[0..<(momentsData.count/2)]) { item in
+                            MomentCardView(momentInfo: item)
+//                            TestCardView(momentInfo: item)
                         }
-                            .frame(width: 163)
-                        LazyVStack {
-                            ForEach(momentsData[(momentsData.count/2)...]) { item in
-                                MomentCardView(momentInfo: item)
-                            }
-                        }
-                            .frame(width: 163)
                     }
+                        .frame(width: 163)
+                    LazyVStack {
+                        ForEach(momentsData[(momentsData.count/2)...]) { item in
+                            MomentCardView(momentInfo: item)
+//                            TestCardView(momentInfo: item)
+                        }
+                    }
+                        .frame(width: 163)
                 }
+                .frame(width: W)
             }
         }
     }
@@ -101,6 +101,16 @@ struct MomentCardView: View {
             }
         }
         .frame(width: 163)
+    }
+}
+
+struct TestCardView: View {
+    let momentInfo: MomentInfo
+    var body: some View {
+        Rectangle()
+            .foregroundColor(.blue)
+            .padding(5)
+            .frame(width: 163, height: 200, alignment: .center)
     }
 }
 
