@@ -26,7 +26,11 @@
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
-		FE801E1B24E28C1900A7B90E /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* Main.swift */; };
+		FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* MainView.swift */; };
+		FEA6112A24E4C03A00861DBC /* Live2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112924E4C03900861DBC /* Live2DViewController.swift */; };
+		FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112D24E4C08C00861DBC /* Live2DHelper.m */; };
+		FEA6113124E4C12D00861DBC /* Live2DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6113024E4C12D00861DBC /* Live2DView.swift */; };
+		FEA6113524E4C55A00861DBC /* Allocation.c in Sources */ = {isa = PBXBuildFile; fileRef = FEA6113324E4C55A00861DBC /* Allocation.c */; };
 		FEC1418524E4075F00E08499 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418424E4075F00E08499 /* CameraController.swift */; };
 		FEC1418724E4082700E08499 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418624E4082700E08499 /* CameraView.swift */; };
 		FEC1418924E40A0600E08499 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC1418824E40A0600E08499 /* CameraViewController.swift */; };
@@ -84,7 +88,14 @@
 		FE0629EF24E2BFCC00D77DA0 /* Comfortaa Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Light.ttf"; sourceTree = "<group>"; };
 		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
 		FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Regular.ttf"; sourceTree = "<group>"; };
-		FE801E1A24E28C1900A7B90E /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		FE801E1A24E28C1900A7B90E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FEA6112924E4C03900861DBC /* Live2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DViewController.swift; sourceTree = "<group>"; };
+		FEA6112B24E4C08B00861DBC /* FeedMyFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedMyFit-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEA6112C24E4C08C00861DBC /* Live2DHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Live2DHelper.h; sourceTree = "<group>"; };
+		FEA6112D24E4C08C00861DBC /* Live2DHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Live2DHelper.m; sourceTree = "<group>"; };
+		FEA6113024E4C12D00861DBC /* Live2DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DView.swift; sourceTree = "<group>"; };
+		FEA6113324E4C55A00861DBC /* Allocation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Allocation.c; sourceTree = "<group>"; };
+		FEA6113424E4C55A00861DBC /* Allocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Allocation.h; sourceTree = "<group>"; };
 		FEC1418424E4075F00E08499 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		FEC1418624E4082700E08499 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		FEC1418824E40A0600E08499 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +246,7 @@
 				83B46C5824DCF5F000036BD0 /* Moments */,
 				8300856F24C0590A004BE80D /* RankList */,
 				8300856E24C05105004BE80D /* Me */,
-				FE801E1A24E28C1900A7B90E /* Main.swift */,
+				FEA6112F24E4C10E00861DBC /* Main */,
 				FEC1418624E4082700E08499 /* CameraView.swift */,
 			);
 			path = UI;
@@ -265,11 +276,34 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FEA6112F24E4C10E00861DBC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE801E1A24E28C1900A7B90E /* MainView.swift */,
+				FEA6113024E4C12D00861DBC /* Live2DView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FEA6113224E4C54800861DBC /* Live 2D */ = {
+			isa = PBXGroup;
+			children = (
+				FEA6113324E4C55A00861DBC /* Allocation.c */,
+				FEA6113424E4C55A00861DBC /* Allocation.h */,
+			);
+			path = "Live 2D";
+			sourceTree = "<group>";
+		};
 		FEC1418324E4074500E08499 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FEA6113224E4C54800861DBC /* Live 2D */,
 				FEC1418424E4075F00E08499 /* CameraController.swift */,
 				FEC1418824E40A0600E08499 /* CameraViewController.swift */,
+				FEA6112924E4C03900861DBC /* Live2DViewController.swift */,
+				FEA6112C24E4C08C00861DBC /* Live2DHelper.h */,
+				FEA6112D24E4C08C00861DBC /* Live2DHelper.m */,
+				FEA6112B24E4C08B00861DBC /* FeedMyFit-Bridging-Header.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,6 +386,7 @@
 				TargetAttributes = {
 					837EEBD024BF0C4F002B4C0A = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					837EEBE124BF0C52002B4C0A = {
 						CreatedOnToolsVersion = 12.0;
@@ -430,14 +465,18 @@
 				FEC1418924E40A0600E08499 /* CameraViewController.swift in Sources */,
 				FECD940F24DD9B19009BAC3B /* Publicinfo.swift in Sources */,
 				FEC1418524E4075F00E08499 /* CameraController.swift in Sources */,
+				FEA6113124E4C12D00861DBC /* Live2DView.swift in Sources */,
 				837EEBD524BF0C4F002B4C0A /* FeedMyFitApp.swift in Sources */,
 				83C1508524BF3C8600DD40C5 /* MeNotificationCenterView.swift in Sources */,
+				FEA6113524E4C55A00861DBC /* Allocation.c in Sources */,
 				83B46C5A24DCF60D00036BD0 /* MomentsView.swift in Sources */,
+				FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
 				8300857124C05938004BE80D /* RankListView.swift in Sources */,
 				FECD940D24DD9B19009BAC3B /* Updatetoken.swift in Sources */,
-				FE801E1B24E28C1900A7B90E /* Main.swift in Sources */,
+				FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */,
 				FECD940C24DD9B19009BAC3B /* Comment.swift in Sources */,
+				FEA6112A24E4C03A00861DBC /* Live2DViewController.swift in Sources */,
 				FECD941524DD9B29009BAC3B /* Apis.swift in Sources */,
 				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
 				FECD940B24DD9B19009BAC3B /* Statistic.swift in Sources */,
@@ -602,6 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedMyFit/Preview Content\"";
 				DEVELOPMENT_TEAM = BCV747DTVS;
@@ -614,6 +654,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeedMyFit/Utilities/FeedMyFit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -624,6 +666,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FeedMyFit/Preview Content\"";
 				DEVELOPMENT_TEAM = BCV747DTVS;
@@ -636,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = FeedMyFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeedMyFit/Utilities/FeedMyFit-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

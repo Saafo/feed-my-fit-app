@@ -25,12 +25,13 @@ struct ContentView: View {
                 CameraView().frame(width: W, height: H)
                 
                 LazyHStack(alignment: .top, spacing:0){
-                MeView().frame(width: W)
+                   
+                    MeView().frame(width: W)
                     
-                MainView().frame(width: W, height: H)
+                    MainView().frame(width: W, height: H)
             
-                MomentsView().frame(width: W)
-                    
+                    MomentsView().frame(width: W)
+                        
                 }
                 
             }.frame(height: 2*H)
@@ -66,3 +67,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
