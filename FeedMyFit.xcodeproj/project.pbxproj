@@ -27,6 +27,7 @@
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
 		FE3AFF3C24E58AE60039CFEF /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = FE3AFF3B24E58AE60039CFEF /* Drawer */; };
+		FE3AFF3E24E5A4D30039CFEF /* CameraResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */; };
 		FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* MainView.swift */; };
 		FEA6112A24E4C03A00861DBC /* Live2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112924E4C03900861DBC /* Live2DViewController.swift */; };
 		FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112D24E4C08C00861DBC /* Live2DHelper.m */; };
@@ -89,6 +90,7 @@
 		FE0629EF24E2BFCC00D77DA0 /* Comfortaa Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Light.ttf"; sourceTree = "<group>"; };
 		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
 		FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Regular.ttf"; sourceTree = "<group>"; };
+		FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraResultView.swift; sourceTree = "<group>"; };
 		FE801E1A24E28C1900A7B90E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FEA6112924E4C03900861DBC /* Live2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DViewController.swift; sourceTree = "<group>"; };
 		FEA6112B24E4C08B00861DBC /* FeedMyFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedMyFit-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -249,7 +251,7 @@
 				8300856F24C0590A004BE80D /* RankList */,
 				8300856E24C05105004BE80D /* Me */,
 				FEA6112F24E4C10E00861DBC /* Main */,
-				FEC1418624E4082700E08499 /* CameraView.swift */,
+				FE3AFF3F24E5A4D80039CFEF /* Camera */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -260,6 +262,15 @@
 				83B46C5924DCF60D00036BD0 /* MomentsView.swift */,
 			);
 			path = Moments;
+			sourceTree = "<group>";
+		};
+		FE3AFF3F24E5A4D80039CFEF /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				FEC1418624E4082700E08499 /* CameraView.swift */,
+				FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		FE6462AB24DC44E5004131EA /* Models */ = {
@@ -477,6 +488,7 @@
 				FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */,
 				83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */,
 				8300857124C05938004BE80D /* RankListView.swift in Sources */,
+				FE3AFF3E24E5A4D30039CFEF /* CameraResultView.swift in Sources */,
 				FECD940D24DD9B19009BAC3B /* Updatetoken.swift in Sources */,
 				FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */,
 				FECD940C24DD9B19009BAC3B /* Comment.swift in Sources */,
