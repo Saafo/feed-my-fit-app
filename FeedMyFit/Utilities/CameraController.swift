@@ -11,8 +11,8 @@ import AVFoundation
 class CameraController: NSObject{
     
     var captureSession: AVCaptureSession?
-    var frontCamera: AVCaptureDevice?
-    var frontCameraInput: AVCaptureDeviceInput?
+    var backCamera: AVCaptureDevice?
+    var backCameraInput: AVCaptureDeviceInput?
     var previewLayer: AVCaptureVideoPreviewLayer?
     
     enum CameraControllerError: Swift.Error {
@@ -29,9 +29,9 @@ class CameraController: NSObject{
             self.captureSession = AVCaptureSession()
         }
         func configureCaptureDevices() throws {
-            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .front)
+            let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
             
-            self.frontCamera = camera
+            self.backCamera = camera
             
             try camera?.lockForConfiguration()
             camera?.unlockForConfiguration()
@@ -40,10 +40,10 @@ class CameraController: NSObject{
         func configureDeviceInputs() throws {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
-            if let frontCamera = self.frontCamera {
-                self.frontCameraInput = try AVCaptureDeviceInput(device: frontCamera)
+            if let frontCamera = self.backCamera {
+                self.backCameraInput = try AVCaptureDeviceInput(device: frontCamera)
                 
-                if captureSession.canAddInput(self.frontCameraInput!) { captureSession.addInput(self.frontCameraInput!)}
+                if captureSession.canAddInput(self.backCameraInput!) { captureSession.addInput(self.backCameraInput!)}
                 else { throw CameraControllerError.inputsAreInvalid }
                 
             }

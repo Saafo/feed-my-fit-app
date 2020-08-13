@@ -26,6 +26,7 @@
 		83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C1508624BF5BAC00DD40C5 /* MeCollectionsView.swift */; };
 		83FC01F124C0040600EA68E1 /* MeDataCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F024C0040600EA68E1 /* MeDataCenterView.swift */; };
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
+		FE3AFF3C24E58AE60039CFEF /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = FE3AFF3B24E58AE60039CFEF /* Drawer */; };
 		FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* MainView.swift */; };
 		FEA6112A24E4C03A00861DBC /* Live2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112924E4C03900861DBC /* Live2DViewController.swift */; };
 		FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112D24E4C08C00861DBC /* Live2DHelper.m */; };
@@ -117,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8300856B24C03BA5004BE80D /* SwiftUICharts in Frameworks */,
+				FE3AFF3C24E58AE60039CFEF /* Drawer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +336,7 @@
 			name = FeedMyFit;
 			packageProductDependencies = (
 				8300856A24C03BA5004BE80D /* SwiftUICharts */,
+				FE3AFF3B24E58AE60039CFEF /* Drawer */,
 			);
 			productName = FeedMyFit;
 			productReference = 837EEBD124BF0C4F002B4C0A /* FeedMyFit.app */;
@@ -410,6 +413,7 @@
 			mainGroup = 837EEBC824BF0C4F002B4C0A;
 			packageReferences = (
 				8300856924C03BA5004BE80D /* XCRemoteSwiftPackageReference "ChartView" */,
+				FE3AFF3A24E58AE60039CFEF /* XCRemoteSwiftPackageReference "swiftui-drawer" */,
 			);
 			productRefGroup = 837EEBD224BF0C4F002B4C0A /* Products */;
 			projectDirPath = "";
@@ -819,6 +823,14 @@
 				minimumVersion = 1.5.3;
 			};
 		};
+		FE3AFF3A24E58AE60039CFEF /* XCRemoteSwiftPackageReference "swiftui-drawer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://gitee.com/atalkingdog/swiftui-drawer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -826,6 +838,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8300856924C03BA5004BE80D /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		FE3AFF3B24E58AE60039CFEF /* Drawer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE3AFF3A24E58AE60039CFEF /* XCRemoteSwiftPackageReference "swiftui-drawer" */;
+			productName = Drawer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

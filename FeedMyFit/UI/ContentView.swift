@@ -26,16 +26,16 @@ struct ContentView: View {
                 
                 LazyHStack(alignment: .top, spacing:0){
                    
-                    MeView().frame(width: W)
+                    MeView().frame(width: W, height: H)
                     
                     MainView().frame(width: W, height: H)
             
-                    MomentsView().frame(width: W)
+                    MomentsView().frame(width: W, height: H)
                         
                 }
                 
             }.frame(height: 2*H)
-            .padding(.bottom, H)
+            .padding(.bottom, H+19)
             .offset(x: CGFloat(2-self.wPage*2)/2*W + position.width)
             .offset(y: CGFloat(2-self.hPage*2)/2*H + position.height)
             .gesture(DragGesture().onChanged{value in

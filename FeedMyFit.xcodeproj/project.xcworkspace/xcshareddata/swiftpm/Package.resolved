@@ -9,6 +9,15 @@
           "revision": "c6610f567975469aaa2a8d6eb225c7162e6d0736",
           "version": "1.5.3"
         }
+      },
+      {
+        "package": "Drawer",
+        "repositoryURL": "https://gitee.com/atalkingdog/swiftui-drawer.git",
+        "state": {
+          "branch": null,
+          "revision": "9799c359a7c8a8b620d96a6343e996eb06f06126",
+          "version": "0.0.3"
+        }
       }
     ]
   },

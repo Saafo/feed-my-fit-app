@@ -7,15 +7,33 @@
 
 import Foundation
 import SwiftUI
+import Drawer
 
 struct MainView: View {
     var body: some View {
-        
-        VStack(spacing: 0) {
-        
-            TopViewsInMainViews()
+        ZStack{
             
-            BottomViewsInMainViews()
+            VStack(spacing: 0) {
+            
+                TopViewsInMainViews()
+                
+                BottomViewsInMainViews()
+            
+            }.frame(width: W, height: H, alignment: .center)
+        
+            Drawer(heights: [1, UIScreen.main.bounds.height - 40], impact: .light) {
+                ZStack {
+                
+                
+                    VStack(alignment: .center) {
+                       
+                        Spacer().frame(height: 4.0)
+                        
+                        
+                        RankListView()
+                    }
+                }
+            }
         }
     }
 }
@@ -56,20 +74,21 @@ struct TopViewsInMainViews: View {
             .font(Font.custom("Comfortaa Bold", size: 51))
             .foregroundColor(Color("SGreen-title"))
             .frame(width: 309, height: 64, alignment: .center)
-            .padding(.top, 48)
+         //   .padding(.top, 48)
+            .padding(.top, 50)
             .padding(.bottom, 17)
         
         ZStack{
             
             Image("Background-1").resizable()
-                .frame(width: 343, height: 443, alignment: .center)
+                .frame(width: 343, height: 420, alignment: .center)
                 .cornerRadius(25)
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
                 .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
         
         }
-        .padding(.bottom, 27)
-    
+       // .padding(.bottom, 27)
+        .padding(.bottom, 20)
     }
 }
 
@@ -82,7 +101,7 @@ struct BottomViewsInMainViews: View {
             .foregroundColor(Color("DBGColor"))
             .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
             .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
-            .frame(width: 374, height: 213, alignment: .center)
+            .frame(width: W, height: 213, alignment: .center)
             
             VStack(spacing: 12){
                 
@@ -97,7 +116,8 @@ struct BottomViewsInMainViews: View {
                     SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)
                     
                 }
-            }
+                
+            }.padding(.bottom, 40)
         }
     }
 }

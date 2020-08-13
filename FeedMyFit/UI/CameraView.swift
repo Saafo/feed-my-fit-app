@@ -9,7 +9,10 @@ import SwiftUI
 import Foundation
 
 struct CameraView: View {
-   var body: some View {
+   
+    @State private var showingAlert = false
+    
+    var body: some View {
         ZStack {
             
             CameraViewController()
@@ -20,7 +23,7 @@ struct CameraView: View {
                     
                     RoundedRectangle(cornerRadius: 19)
                         .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:0.5))
-                        .frame(width: 375, height: 108, alignment: .center)
+                        .frame(width: W, height: 108, alignment: .center)
                     
                     HStack(spacing: 117){
                         
@@ -39,16 +42,36 @@ struct CameraView: View {
                     
                     RoundedRectangle(cornerRadius: 19)
                         .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:0.5))
-                        .frame(width: 375, height: 269, alignment: .center)
+                        .frame(width: W, height: 269, alignment: .center)
                     
                     HStack(spacing: 0){
                         
                         Spacer()
                         
-                        RoundedRectangle(cornerRadius: 90)
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 90)
                             .frame(width: 90, height: 90, alignment: .center)
                             .foregroundColor(Color(UIColor.white))
-                            .padding(.trailing, 43)
+                            
+                            RoundedRectangle(cornerRadius: 72)
+                            .frame(width: 72, height: 72, alignment: .center)
+                            .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:0.5))
+                        
+                            Button(action: {
+                                        self.showingAlert = true
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {self.showingAlert = false}
+                                        
+                                    }) {
+                                        RoundedRectangle(cornerRadius: 67.5)
+                                            .frame(width: 67.5, height: 67.5, alignment: .center)
+                                            .foregroundColor(Color(UIColor.white))
+                                        }
+                                        .alert(isPresented: $showingAlert) {
+                                            Alert(title: Text("正在识别"), message: Text("请稍候"), dismissButton: .default(Text("取消")))
+                                        }
+                            
+                        }.padding(.trailing, 60)
                         
                         Image("Gallary").resizable().scaledToFit().frame(width: 50, height: 50, alignment: .center)
                             .padding(.trailing, 49)
