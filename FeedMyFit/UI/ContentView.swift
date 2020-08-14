@@ -21,7 +21,7 @@ struct ContentView: View {
         
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(.all)
-            VStack(spacing: 0){ 
+            VStack(spacing: 0){
                 
                 CameraView().frame(width: W, height: H)
                 

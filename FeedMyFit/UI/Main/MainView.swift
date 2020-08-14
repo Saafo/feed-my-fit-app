@@ -65,7 +65,28 @@ struct SubViewsForNutritions: View {
              
             Image(centerImage).resizable().scaledToFit()
                 .frame(width: centerImageSize, height: centerImageSize, alignment: .center)
+            
+            OutlineForSubViewsForNutritions(percentage: 80)
        
+        }
+    }
+}
+
+struct OutlineForSubViewsForNutritions: View {
+    var percentage: CGFloat = 0
+    var colors: [Color] = [Color("SGreen-deep")]
+    var body: some View {
+        ZStack {
+            
+            Circle().fill(Color.clear).frame(width: 66, height: 66)
+                .overlay(
+                
+                    Circle()
+                        .trim(from: 0, to: percentage * 0.01)
+                        .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                        .fill(AngularGradient(gradient: .init(colors: colors), center: .center, startAngle: .zero, endAngle: .degrees(360)))
+                ).animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0))
+            
         }
     }
 }
@@ -109,7 +130,7 @@ struct BottomViewsInMainViews: View {
             VStack(spacing: 12){
                 
                 HStack(spacing: 45){
-                    SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53)
+                    SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 43)
                     SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
                     SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
                 }
