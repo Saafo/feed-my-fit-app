@@ -13,6 +13,10 @@ struct MainView: View {
     var body: some View {
         ZStack{
             
+            Color("DBGColor")
+                .frame(width: W, height: H)
+                .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing: 0) {
             
                 TopViewsInMainViews()
@@ -22,13 +26,12 @@ struct MainView: View {
             }.frame(width: W, height: H, alignment: .center)
         
             Drawer(heights: [1, UIScreen.main.bounds.height - 40], impact: .light) {
-                ZStack {
                 
+                ZStack {
                 
                     VStack(alignment: .center) {
                        
                         Spacer().frame(height: 4.0)
-                        
                         
                         RankListView()
                     }

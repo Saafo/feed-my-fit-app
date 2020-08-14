@@ -19,37 +19,44 @@ struct MomentsView: View {
         MomentInfo(pic: Image("Pic2"), content: "今日份的午餐，又是健康的一天，啦啦啦啦啦啦啦", userInfo: Publicinfo(Id: "11", Avatar: "Avatar1", Username: "硬核的半吨仙人", Sex: "Male", City: "成都", Streak: 17))
     ]
     var body: some View {
-        VStack {
-            HStack {
-                Text("广场")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding(.horizontal, 20)
-                Spacer()
-            }
-            .padding(.top, 25)
-            ScrollView(showsIndicators: false) {
-                HStack(alignment: .top) {
-                    LazyVStack {
-                        ForEach(momentsData[0..<(momentsData.count/2)]) { item in
-                            MomentCardView(momentInfo: item)
-//                            TestCardView(momentInfo: item)
-                        }
-                    }
-                        .frame(width: 163)
-                        .padding(.leading, 16)
+        ZStack{
+            
+            Color("DBGColor")
+                .frame(width: W, height: H)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                HStack {
+                    Text("广场")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding(.horizontal, 20)
                     Spacer()
-                        .frame(maxWidth: 18)
-                    LazyVStack {
-                        ForEach(momentsData[(momentsData.count/2)...]) { item in
-                            MomentCardView(momentInfo: item)
-//                            TestCardView(momentInfo: item)
-                        }
-                    }
-                        .frame(width: 163)
-                        .padding(.trailing, 16)
                 }
-                .frame(width: W)
+                .padding(.top, 25)
+                ScrollView(showsIndicators: false) {
+                    HStack(alignment: .top) {
+                        LazyVStack {
+                            ForEach(momentsData[0..<(momentsData.count/2)]) { item in
+                                MomentCardView(momentInfo: item)
+    //                            TestCardView(momentInfo: item)
+                            }
+                        }
+                            .frame(width: 163)
+                            .padding(.leading, 16)
+                        Spacer()
+                            .frame(maxWidth: 18)
+                        LazyVStack {
+                            ForEach(momentsData[(momentsData.count/2)...]) { item in
+                                MomentCardView(momentInfo: item)
+    //                            TestCardView(momentInfo: item)
+                            }
+                        }
+                            .frame(width: 163)
+                            .padding(.trailing, 16)
+                    }
+                    .frame(width: W)
+                }
             }
         }
     }

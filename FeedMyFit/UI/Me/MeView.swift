@@ -16,38 +16,45 @@ struct MeView: View {
     var myCollectionsCount: Int = 38
     var lastWeekScore: [Double] = [70,50,40,70,50,80,98]
     var body: some View {
-        VStack(spacing: 0) {
-            HStack {
-                Text("我的")
-                    .font(.largeTitle)
-                    .bold()
-                    .padding()
-                Spacer()
-            }
-            VStack {
+        ZStack{
+            
+            Color("DBGColor")
+                .frame(width: W, height: H)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 0) {
                 HStack {
-                    VStack {
-                        SmallCardView(title: "消息中心", number: unreadMessagesCount, measureWord: "条", content: "未读消息", icon: "Bell", systemIcon: false, color: "SYellow", height: 121, dest: MeNotificationCenterView())
-                            .padding(.bottom, 10)
-                        SmallCardView(title: "我的收藏", number: myCollectionsCount, measureWord: "条", content: "收藏", icon: "Star", systemIcon: false, color: "SOrange", height: 121, dest: MeCollectionsView())
-                    }
+                    Text("我的")
+                        .font(.largeTitle)
+                        .bold()
+                        .padding()
                     Spacer()
-                    MediumCardView(title: "个人中心", username: username, content: signature, icon: avatar, height: 259, dest: MePersonalCenterView())
                 }
-            }
-            HStack {
-                BigCardView(title: "数据中心", highestScore: 99, streakDays: 16, recordDays: 74, scoreArray: lastWeekScore, color1: "SGreen", color2: "SGreen", height: 272, dest: MeDataCenterView())
                 VStack {
-                    TinyCardView(title: "反馈客服", icon: "envelope", systemIcon: true, color: Color("SPurple"), height: 111, dest: MeFeedbackView())
-                        .padding(.bottom, 10)
-                    TinyCardView(title: "关于\nFeedMyFit", icon: "heart", systemIcon: true, color: Color("SRed"), height: 111, dest: MeFeedbackView())
+                    HStack {
+                        VStack {
+                            SmallCardView(title: "消息中心", number: unreadMessagesCount, measureWord: "条", content: "未读消息", icon: "Bell", systemIcon: false, color: "SYellow", height: 121, dest: MeNotificationCenterView())
+                                .padding(.bottom, 10)
+                            SmallCardView(title: "我的收藏", number: myCollectionsCount, measureWord: "条", content: "收藏", icon: "Star", systemIcon: false, color: "SOrange", height: 121, dest: MeCollectionsView())
+                        }
+                        Spacer()
+                        MediumCardView(title: "个人中心", username: username, content: signature, icon: avatar, height: 259, dest: MePersonalCenterView())
+                    }
                 }
+                HStack {
+                    BigCardView(title: "数据中心", highestScore: 99, streakDays: 16, recordDays: 74, scoreArray: lastWeekScore, color1: "SGreen", color2: "SGreen", height: 272, dest: MeDataCenterView())
+                    VStack {
+                        TinyCardView(title: "反馈客服", icon: "envelope", systemIcon: true, color: Color("SPurple"), height: 111, dest: MeFeedbackView())
+                            .padding(.bottom, 10)
+                        TinyCardView(title: "关于\nFeedMyFit", icon: "heart", systemIcon: true, color: Color("SRed"), height: 111, dest: MeFeedbackView())
+                    }
+                }
+                    .padding(.top, 17)
+                Spacer()
+                    .frame(height: 30)
             }
-                .padding(.top, 17)
-            Spacer()
-                .frame(height: 30)
+            .padding(.horizontal, 16.0)
         }
-        .padding(.horizontal, 16.0)
     }
 }
 
