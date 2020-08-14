@@ -27,6 +27,7 @@ struct CameraView: View {
                         
                         RoundedRectangle(cornerRadius: 19)
                             .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:0.5))
+                            .background(Blur())
                             .frame(width: W, height: 108, alignment: .center)
                         
                         HStack(spacing: 117){
@@ -46,6 +47,7 @@ struct CameraView: View {
                         
                         RoundedRectangle(cornerRadius: 19)
                             .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:0.5))
+                            .background((Blur()))
                             .frame(width: W, height: 269, alignment: .center)
                         
                         HStack(spacing: 0){
@@ -217,6 +219,18 @@ struct CameraView: View {
         
         }.edgesIgnoringSafeArea(.all)
    }
+}
+
+struct Blur: UIViewRepresentable {
+    let style: UIBlurEffect.Style = .systemUltraThinMaterial
+
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        return UIVisualEffectView(effect: UIBlurEffect(style: style))
+    }
+
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
+    }
 }
 
 struct CameraView_Previews: PreviewProvider {
