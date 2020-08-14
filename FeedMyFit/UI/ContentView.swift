@@ -9,6 +9,7 @@ import SwiftUI
 
 let W = UIScreen.main.bounds.width
 let H = UIScreen.main.bounds.height
+var isAted = false
 
 struct ContentView: View {
     
@@ -20,7 +21,7 @@ struct ContentView: View {
         
         ZStack {
             Color.init("DBGColor").edgesIgnoringSafeArea(.all)
-            VStack(spacing: 0){
+            VStack(spacing: 0){ 
                 
                 CameraView().frame(width: W, height: H)
                 
@@ -49,10 +50,15 @@ struct ContentView: View {
                     self.wPage = 1
                 }else if self.wPage == 1 && value.translation.width > 0.4*W{
                     self.wPage = 0
-                }else if self.hPage == 1 && value.translation.height > 0.4*H{
+                }else if self.hPage == 1 && value.translation.height > 0.3*H{
                     self.hPage = 0
-                }else if self.hPage == 0 && value.translation.height < -0.4*H{
+                }else if self.hPage == 0 && value.translation.height < -0.3*H{
                     self.hPage = 1
+                    print("Sliding!")
+                }else if isAted == true{
+                    self.hPage = 1
+                    print("Now back successfully!")
+                    isAted = false
                 }
                 self.position = .zero
             })

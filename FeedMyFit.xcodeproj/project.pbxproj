@@ -28,6 +28,7 @@
 		83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FC01F224C004CD00EA68E1 /* MePersonalCenterView.swift */; };
 		FE3AFF3C24E58AE60039CFEF /* Drawer in Frameworks */ = {isa = PBXBuildFile; productRef = FE3AFF3B24E58AE60039CFEF /* Drawer */; };
 		FE3AFF3E24E5A4D30039CFEF /* CameraResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */; };
+		FE54A78824E65FC400AD9F40 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE54A78724E65FC400AD9F40 /* File.swift */; };
 		FE801E1B24E28C1900A7B90E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801E1A24E28C1900A7B90E /* MainView.swift */; };
 		FEA6112A24E4C03A00861DBC /* Live2DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112924E4C03900861DBC /* Live2DViewController.swift */; };
 		FEA6112E24E4C08C00861DBC /* Live2DHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA6112D24E4C08C00861DBC /* Live2DHelper.m */; };
@@ -91,6 +92,7 @@
 		FE0629F024E2BFCC00D77DA0 /* Comfortaa Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Bold.ttf"; sourceTree = "<group>"; };
 		FE0629F124E2BFCC00D77DA0 /* Comfortaa Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa Regular.ttf"; sourceTree = "<group>"; };
 		FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraResultView.swift; sourceTree = "<group>"; };
+		FE54A78724E65FC400AD9F40 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FE801E1A24E28C1900A7B90E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		FEA6112924E4C03900861DBC /* Live2DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live2DViewController.swift; sourceTree = "<group>"; };
 		FEA6112B24E4C08B00861DBC /* FeedMyFit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedMyFit-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			children = (
 				FEC1418624E4082700E08499 /* CameraView.swift */,
 				FE3AFF3D24E5A4D30039CFEF /* CameraResultView.swift */,
+				FE54A78724E65FC400AD9F40 /* File.swift */,
 			);
 			path = Camera;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				83C1508724BF5BAC00DD40C5 /* MeCollectionsView.swift in Sources */,
 				FECD940B24DD9B19009BAC3B /* Statistic.swift in Sources */,
 				FEC1418724E4082700E08499 /* CameraView.swift in Sources */,
+				FE54A78824E65FC400AD9F40 /* File.swift in Sources */,
 				83FC01F324C004CD00EA68E1 /* MePersonalCenterView.swift in Sources */,
 				FECD940E24DD9B19009BAC3B /* Updatedata.swift in Sources */,
 				FECD940A24DD9B19009BAC3B /* Selfinfo.swift in Sources */,

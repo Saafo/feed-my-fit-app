@@ -92,14 +92,122 @@ struct CameraView: View {
             
             }.locked($isLocked) {_ in
                
-                return 0
+                return 770
             }
                 
             
+            //MARK: -CameraResultView
             
             Drawer(heights: [0, 800]) {
                
-                CameraResultView()
+                ZStack{
+                    
+                    RoundedRectangle(cornerRadius: 19)
+                        .frame(width: W, height: 731, alignment: .center)
+                        .foregroundColor(Color(red: 70/255, green: 70/255, blue: 70/255, opacity:1))
+                    
+                    VStack(spacing: 0){
+                        
+                        
+                        RoundedRectangle(cornerRadius: 19)
+                            .frame(width: 88, height: 2, alignment: .center)
+                            .foregroundColor(.black)
+                        
+                        Spacer().frame(height: 80)
+                        
+                        Image("MeatBall")
+                        
+                        HStack(spacing: 0){
+                            
+                            VStack(spacing: 0){
+                                
+                                Text("肉丸").font(Font.system(size: 41)).foregroundColor(.white).padding(.trailing, 32)
+                                
+                                Spacer().frame(height: 42)
+                                
+                                Text("我只吃：").font(Font.system(size: 27)).foregroundColor(.white).frame(alignment: .leading)
+                            
+                            }
+                            
+                            
+                            Spacer().frame(width: 125)
+                            
+                            RoundedRectangle(cornerRadius: 7)
+                                .frame(width: 117, height: 108, alignment: .center)
+                                
+                                .shadow(color: Color(red: 1, green: 1, blue: 1, opacity: 0.19), radius: 10, x: 2, y: 2)
+                                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.2), radius: 10, x: -2, y: -2)
+                            
+                                .foregroundColor(Color(red: 1, green: 1, blue: 1, opacity: 0))
+                        
+                        }
+                        
+                        Spacer().frame(height: 13)
+                        
+                        HStack(spacing: 14){
+
+                            ZStack {
+                                
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color("SGreen-deep"))
+                                    .shadow(color: Color("DBlackShadow"), radius: 8, x: 4, y: 4)
+                                    .shadow(color: Color("DBlackShadow"), radius: 0, x: -1, y: -1)
+                                    .frame(width: 180, height: 57, alignment: .center)
+                                
+                                HStack(spacing: 14){
+                                    
+                                    addAndLessButtom(bottomStyle: "-")
+                                    
+                                    Text("0.5").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 44)
+                                    
+                                    addAndLessButtom(bottomStyle: "+")
+                        
+                                }
+                            }
+                            
+                            Text("盘").font(Font.system(size: 30)).foregroundColor(Color("DWhite")).frame(width: 29)
+                            
+                            Spacer().frame(width: 103)
+                            
+                        }
+                        
+                        Spacer().frame(height: 30)
+                        
+                        VStack(spacing: 0){
+                            
+                            Text("预计达成：").font(Font.system(size: 18)).foregroundColor(Color("DWhite")).frame(width: 100).padding(.trailing, 254).padding(.bottom, 15)
+                            
+                            
+                            HStack(spacing: 14){
+                                
+                                SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)
+                                
+                            }
+                            
+                        }.padding(.bottom, 20)
+                        
+                        Button(action: {
+                            self.isLocked = false
+                            isAted = true
+                                }) {
+                            ZStack{
+                                
+                                RoundedRectangle(cornerRadius: 10)
+                                    .foregroundColor(Color("SGreen-deep"))
+                                    .shadow(color: Color("DBlackShadow"), radius: 8, x: 4, y: 4)
+                                    .shadow(color: Color("DBlackShadow"), radius: 0, x: -1, y: -1)
+                                    .frame(width: 343, height: 75, alignment: .center)
+                                
+                                Text("吃掉!").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 100)
+                            }.padding(.bottom, 30)
+                        }
+                        
+                    }
+                }
             
             }.locked($isLocked) {_ in
                
