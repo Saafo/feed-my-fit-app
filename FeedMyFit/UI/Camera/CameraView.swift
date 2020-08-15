@@ -13,13 +13,15 @@ struct CameraView: View {
    
     @State private var showingAlert = false
     @State private var isLocked = false
+    @State private var diskCounts : Float = 1
+    lazy private var diskCountsString = String(format: "%.2f", diskCounts)
     
     var body: some View {
         ZStack {
             
             CameraViewController()
             
-            Drawer(heights: [780, 800]) {
+            //Drawer(heights: [780, 800]) {
                
                 VStack(spacing: 0){
                     
@@ -92,10 +94,10 @@ struct CameraView: View {
                     
                 }
             
-            }.locked($isLocked) {_ in
+           // }.locked($isLocked) {_ in
                
-                return 770
-            }
+          //      return 770
+         ///   }
                 
             
             //MARK: -CameraResultView
@@ -115,24 +117,26 @@ struct CameraView: View {
                             .frame(width: 88, height: 2, alignment: .center)
                             .foregroundColor(.black)
                         
-                        Spacer().frame(height: 80)
+                        Spacer().frame(height: 50)
                         
-                        Image("MeatBall")
+                        Image("Chicken").resizable().scaledToFit().frame(width: 160, height: 160, alignment: .center)
+                        
+                        Spacer().frame(height: 30)
                         
                         HStack(spacing: 0){
                             
                             VStack(spacing: 0){
                                 
-                                Text("肉丸").font(Font.system(size: 41)).foregroundColor(.white).padding(.trailing, 32)
+                                Text("大盘鸡饭").font(Font.system(size: 41)).foregroundColor(.white).padding(.leading, 23)
                                 
                                 Spacer().frame(height: 42)
                                 
-                                Text("我只吃：").font(Font.system(size: 27)).foregroundColor(.white).frame(alignment: .leading)
+                                Text("我只吃：").font(Font.system(size: 27)).foregroundColor(.white).frame(alignment: .leading).padding(.trailing, 30)
                             
                             }
                             
                             
-                            Spacer().frame(width: 125)
+                            Spacer().frame(width: 90)
                             
                             RoundedRectangle(cornerRadius: 7)
                                 .frame(width: 117, height: 108, alignment: .center)
@@ -158,11 +162,43 @@ struct CameraView: View {
                                 
                                 HStack(spacing: 14){
                                     
-                                    addAndLessButtom(bottomStyle: "-")
+                                    Button(action: {
+                                        
+                                        self.diskCounts = self.diskCounts - 0.5
+                                        
+                                            }) {
                                     
-                                    Text("0.5").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 44)
+                                        ZStack{
+                                        
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .foregroundColor(Color("SGreen-deep"))
+                                                .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                                .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
+                                                .frame(width: 57, height: 57, alignment: .center)
+                                   
+                                            Text("-").font(Font.system(size: 41)).foregroundColor(Color("DGrey"))
+                                        }
+                                    }
                                     
-                                    addAndLessButtom(bottomStyle: "+")
+                                    Text("1").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 44, height: 40)
+                                    
+                                    Button(action: {
+                                        
+                                        self.diskCounts = self.diskCounts + 0.5
+                                        
+                                            }) {
+                                    
+                                        ZStack{
+                                        
+                                            RoundedRectangle(cornerRadius: 10)
+                                                .foregroundColor(Color("SGreen-deep"))
+                                                .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                                .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
+                                                .frame(width: 57, height: 57, alignment: .center)
+                                   
+                                            Text("+").font(Font.system(size: 41)).foregroundColor(Color("DGrey"))
+                                        }
+                                    }
                         
                                 }
                             }
@@ -182,11 +218,11 @@ struct CameraView: View {
                             
                             HStack(spacing: 14){
                                 
-                                SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53, percentage: 40)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 35)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 15, colors: [Color("SRed")])
+                                SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 25)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 40)
                                 
                             }
                             

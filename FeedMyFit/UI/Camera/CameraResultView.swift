@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct CameraResultView: View {
+    
+    @State var diskCounts : Float = 1
+    
     var body: some View {
         
         ZStack{
@@ -32,7 +35,7 @@ struct CameraResultView: View {
                     
                     VStack(spacing: 0){
                         
-                        Text("肉丸").font(Font.system(size: 41)).foregroundColor(.white).padding(.trailing, 32)
+                        Text("大盘鸡").font(Font.system(size: 41)).foregroundColor(.white).padding(.trailing, 32)
                         
                         Spacer().frame(height: 42)
                         
@@ -67,11 +70,43 @@ struct CameraResultView: View {
                         
                         HStack(spacing: 14){
                             
-                            addAndLessButtom(bottomStyle: "-")
+                            Button(action: {
+                                
+                                self.diskCounts = self.diskCounts + 0.5
+                                
+                                    }) {
                             
-                            Text("0.5").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 44)
+                                ZStack{
+                                
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(Color("SGreen-deep"))
+                                        .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                        .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
+                                        .frame(width: 57, height: 57, alignment: .center)
+                           
+                                    Text("-").font(Font.system(size: 41)).foregroundColor(Color("DGrey"))
+                                }
+                            }
                             
-                            addAndLessButtom(bottomStyle: "+")
+                            Text("\(diskCounts)").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 44)
+                            
+                            Button(action: {
+                                
+                                self.diskCounts = self.diskCounts - 0.5
+                                
+                                    }) {
+                            
+                                ZStack{
+                                
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .foregroundColor(Color("SGreen-deep"))
+                                        .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                        .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
+                                        .frame(width: 57, height: 57, alignment: .center)
+                           
+                                    Text("+").font(Font.system(size: 41)).foregroundColor(Color("DGrey"))
+                                }
+                            }
                 
                         }
                     }
@@ -91,11 +126,11 @@ struct CameraResultView: View {
                     
                     HStack(spacing: 14){
                         
-                        SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53)
-                        SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
-                        SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
-                        SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38)
-                        SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)
+                        SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53, percentage: 40)
+                        SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 35)
+                        SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 15)
+                        SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 25)
+                        SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 40)
                         
                     }
                     
@@ -129,26 +164,6 @@ struct CameraResultView_Previews: PreviewProvider {
     }
 }
 
-struct addAndLessButtom: View {
-    
-    var bottomStyle: String
-    
-    var body: some View {
-        
-        ZStack{
-            
-            RoundedRectangle(cornerRadius: 10)
-                .foregroundColor(Color("SGreen-deep"))
-                .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
-                .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
-                .frame(width: 57, height: 57, alignment: .center)
-       
-            Text(bottomStyle).font(Font.system(size: 41)).foregroundColor(Color("DGrey"))
-        }
-         
-    }
-    
-}
 
 struct SubViewsForNutritionsInResult: View {
     
@@ -156,6 +171,8 @@ struct SubViewsForNutritionsInResult: View {
     var takeIn: Int
     var demond: Int
     var centerImageSize: CGFloat
+    var percentage: CGFloat
+    var colors: [Color] = [Color("SGreen-deep")]
     var body: some View {
         
         ZStack{
@@ -174,6 +191,15 @@ struct SubViewsForNutritionsInResult: View {
              
             Image(centerImage).resizable().scaledToFit()
                 .frame(width: centerImageSize, height: centerImageSize, alignment: .center)
+            
+            Circle().fill(Color.clear).frame(width: 66, height: 66)
+                .overlay(
+                
+                    Circle()
+                        .trim(from: 0, to: percentage * 0.01)
+                        .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
+                        .fill(AngularGradient(gradient: .init(colors: colors), center: .center, startAngle: .zero, endAngle: .degrees(360)))
+                )
        
         }
     }

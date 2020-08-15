@@ -47,6 +47,8 @@ struct SubViewsForNutritions: View {
     var takeIn: Int
     var demond: Int
     var centerImageSize: CGFloat
+    var percentage: CGFloat 
+    var colors: [Color] = [Color("SGreen-deep")]
     var body: some View {
         
         ZStack{
@@ -66,18 +68,6 @@ struct SubViewsForNutritions: View {
             Image(centerImage).resizable().scaledToFit()
                 .frame(width: centerImageSize, height: centerImageSize, alignment: .center)
             
-            OutlineForSubViewsForNutritions(percentage: 80)
-       
-        }
-    }
-}
-
-struct OutlineForSubViewsForNutritions: View {
-    var percentage: CGFloat = 0
-    var colors: [Color] = [Color("SGreen-deep")]
-    var body: some View {
-        ZStack {
-            
             Circle().fill(Color.clear).frame(width: 66, height: 66)
                 .overlay(
                 
@@ -85,8 +75,8 @@ struct OutlineForSubViewsForNutritions: View {
                         .trim(from: 0, to: percentage * 0.01)
                         .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
                         .fill(AngularGradient(gradient: .init(colors: colors), center: .center, startAngle: .zero, endAngle: .degrees(360)))
-                ).animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0))
-            
+                )//.animation(.spring(response: 2.0, dampingFraction: 1.0, blendDuration: 1.0))
+       
         }
     }
 }
@@ -110,6 +100,7 @@ struct TopViewsInMainViews: View {
                 .shadow(color: Color("DBlackShadow"), radius: 10, x: 4, y: 4)
                 .shadow(color: Color("DWhiteShadow"), radius: 10, x: -4, y: -4)
         
+            GIFView(gifName: "Scene1")
         }
        // .padding(.bottom, 27)
         .padding(.bottom, 20)
@@ -130,14 +121,14 @@ struct BottomViewsInMainViews: View {
             VStack(spacing: 12){
                 
                 HStack(spacing: 45){
-                    SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 43)
-                    SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43)
-                    SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42)
+                    SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 30)
+                    SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 70)
+                    SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 100)
                 }
                
                 HStack(spacing: 45){
-                    SubViewsForNutritions(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38)
-                    SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39)
+                    SubViewsForNutritions(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 87)
+                    SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 100)
                     
                 }
                 
