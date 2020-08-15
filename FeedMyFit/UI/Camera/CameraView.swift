@@ -152,8 +152,8 @@ struct CameraView: View {
                                 
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(Color("SGreen-deep"))
-                                    .shadow(color: Color("DBlackShadow"), radius: 8, x: 4, y: 4)
-                                    .shadow(color: Color("DBlackShadow"), radius: 0, x: -1, y: -1)
+                                    .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                    .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
                                     .frame(width: 180, height: 57, alignment: .center)
                                 
                                 HStack(spacing: 14){
@@ -200,8 +200,8 @@ struct CameraView: View {
                                 
                                 RoundedRectangle(cornerRadius: 10)
                                     .foregroundColor(Color("SGreen-deep"))
-                                    .shadow(color: Color("DBlackShadow"), radius: 8, x: 4, y: 4)
-                                    .shadow(color: Color("DBlackShadow"), radius: 0, x: -1, y: -1)
+                                    .shadow(color: Color("DBlackShadow-result"), radius: 8, x: 4, y: 4)
+                                    .shadow(color: Color("DWhiteShadow-result"), radius: 8, x: -4, y: -4)
                                     .frame(width: 343, height: 75, alignment: .center)
                                 
                                 Text("吃掉!").font(Font.system(size: 30)).foregroundColor(Color("DBlack")).frame(width: 100)
