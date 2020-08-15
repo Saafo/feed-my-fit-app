@@ -218,11 +218,11 @@ struct CameraView: View {
                             
                             HStack(spacing: 14){
                                 
-                                SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53, percentage: 40)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 35)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 15, colors: [Color("SRed")])
-                                SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 25)
-                                SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 40)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 53, percentage: 60)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 50)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 40, colors: [Color("SRed")])
+                                SubViewsForNutritionsInResult(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 55)
+                                SubViewsForNutritionsInResult(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 55)
                                 
                             }
                             

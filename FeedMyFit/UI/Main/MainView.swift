@@ -122,13 +122,13 @@ struct BottomViewsInMainViews: View {
                 
                 HStack(spacing: 45){
                     SubViewsForNutritions(centerImage: "Pic-meat", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 30)
-                    SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 70)
-                    SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 100)
+                    SubViewsForNutritions(centerImage: "Pic-calorie", takeIn: 60, demond: 100, centerImageSize: 43, percentage: 40)
+                    SubViewsForNutritions(centerImage: "Pic-fruit", takeIn: 60, demond: 100, centerImageSize: 42, percentage: 35)
                 }
                
                 HStack(spacing: 45){
-                    SubViewsForNutritions(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 87)
-                    SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 100)
+                    SubViewsForNutritions(centerImage: "Pic-protein", takeIn: 60, demond: 100, centerImageSize: 38, percentage: 30)
+                    SubViewsForNutritions(centerImage: "Pic-rice", takeIn: 60, demond: 100, centerImageSize: 39, percentage: 40)
                     
                 }
                 
